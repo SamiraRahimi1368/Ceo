@@ -19,7 +19,7 @@ const Hero = () => {
             <div>
                 <h1 className="text-white font-medium mt-28	">Welcome To Sceo
                 </h1>
-                <div className=" font-dosis text-slate-100 text-center lg:text-start  lg:text-5xl sm:text-3xl  font-bold lg:leading-[4rem]  sm:leading-[4rem] sm:leading-[2rem] lg:mt-12 md:mt-48  lg:mx-0 sm:mt-36 sm:ml-10 sm:mr-10 xs:text-3xl xs:mt-48" data-aos="fade-left">We Provide SEO Services For Agency</div>
+                <div className=" font-dosis text-slate-100 text-center lg:text-start  lg:text-5xl sm:text-3xl  font-bold lg:leading-[4rem]  sm:leading-[4rem] sm:leading-[2rem] lg:mt-12 md:mt-48 lg:mx-0 sm:mt-36 sm:ml-10 sm:mr-10 xs:text-3xl xs:mt-48" data-aos="fade-left">We Provide SEO Services For Agency</div>
                 <div className="sm: mt-3 mt-6 mx-0 text-white lg:text-base sm:text-sm sm:text-center text-left font-catamaran leading-8  lg:text-start lg:mx-0 md:tex-right text-slate-100 md:text-md sm:text-white sm:pr-20 sm:leading-[2rem]" data-aos="fade-right">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates rerum odio, corrupti, culpa a rem itaque similique autem tempore voluptatibus.
 
                 </div>
@@ -39,7 +39,7 @@ const Hero = () => {
                     priority
                     fill
                     src='/images/1.png'
-                    className="max-w-full mt-24 position-absolute" data-aos="zoom-in"
+                    className="max-w-full mt-24 position-absolute " data-aos="zoom-in"
 
                     alt="home-font"
                 />
@@ -48,14 +48,14 @@ const Hero = () => {
 
                 fill
                 src='/images/5.png'
-                className="w-min lg:mt-6 lg:-ml-44"
+                className="block w-min lg:mt-6 lg:-ml-44"
 
                 alt="home-font"
             />
         </div>
                 <Image
                     fill
-                    className="  z-1 max-w-fit	mt-6 lg:ml-28 "data-aos="fade-up"
+                    className="block  z-1 max-w-fit	mt-6 lg:ml-28  "data-aos="fade-up"
                     src='/images/2.png'
                     alt="home-font"
                 />
@@ -64,7 +64,7 @@ const Hero = () => {
 
                 fill
                 src='/images/8.png'
-                className="w-min  lg:ml-56 lg:mt-4"
+                className="block w-min  lg:ml-56 lg:mt-12 xl:mt-4 "
 
                 alt="home-font"
             />
@@ -74,7 +74,7 @@ const Hero = () => {
 
                     fill
                     src='/images/3.png'
-                    className="max-w-fit object-cover lg:-ml-32 mt-16" data-aos="fade-right"
+                    className="block max-w-fit object-cover lg:-ml-32 mt-16 " data-aos="fade-right"
 
                     alt="home-font"
                 />
