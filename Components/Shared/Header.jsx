@@ -4,7 +4,8 @@ const Header = () => {
 
    return (
       <div className="header mx-auto  justify-between grid grid-cols-3 flex w-full	 mx-auto  "
-         style={{ background: 'linear-gradient(to bottom, #a157e7, #00429b)' }}>
+      style={{ background: 'linear-gradient(to bottom, #a157e7, #00429b)' }}    >
+      
 
          <div className="nav flex flex-col mx-auto mt-4 ">
             <img src="images/heder-logo.png">
