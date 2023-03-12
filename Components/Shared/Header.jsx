@@ -11,7 +11,7 @@ const Header = () => {
             </img>
 
          </div>
-         <nav className="-mt-4">
+         <nav className="lg:-mt-4">
             <DesktopMenu />
          </nav>
          <div className="hidden lg:block flex flex-col mx-auto">

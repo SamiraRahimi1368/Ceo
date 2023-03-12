@@ -92,10 +92,10 @@ const DesktopMenu = () => {
                                     </a>
                                     {
                                         item.children?.length > 0 &&
-                                        <ul className="invisible opacity-10 translate-y-8 group-hover:block group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-1000 absolute top-16 bg-white text-black ml-4 lg:w-52 xl:w-68 2xl:w-72  mt-4  border-t border-blue-700 border-t-2		">
+                                        <ul className="invisible opacity-10 translate-y-8 group-hover:block group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-1000 absolute top-16 bg-white text-black ml-4 lg:w-52 xl:w-68 2xl:w-72  mt-4  border-t border-blue-700 border-t-2	">
                                             {
                                                 item.children.map(child =>
-                                                    <li className="py-3 pl-4 border-b-2 border-gray-100 border-lg border-slate-200 	first:bg-slate-200 first:text-blue-700 hover:text-blue-700 hover:bg-slate-200">
+                                                    <li className="py-3 pl-4 border-b-2 border-gray-100 border-lg border-slate-200 	first:bg-slate-200 first:text-blue-700 hover:text-blue-700 last:border-0 hover:bg-slate-200">
                                                         <a
                                                             href={child.url}
                                                         >
