@@ -13,7 +13,7 @@ const Hero = () => {
 
     }, []);
     return <div
-        className="hero flex flex-col items-center -mt-24 h-auto z-10"
+        className="hero flex flex-col items-center -mt-24 h-auto z-10 overflow-hidden"
         style={{ background: 'linear-gradient(to bottom, #a157e7, #00429b)' }}    >
 
 
@@ -23,20 +23,22 @@ const Hero = () => {
                 <h1 className='font-sans Inter text-white text-lg font-bold'>Welcome To Sceo
                 </h1>
                 <div className=" font-mono
- text-slate-100 text-center lg:text-start  lg:text-5xl sm:text-3xl  font-bold lg:leading-[4rem]  sm:leading-[4rem] sm:leading-[2rem] lg:mt-12 md:mt-48 lg:mx-0 sm:mt-36 sm:ml-10 sm:mr-10 xs:text-3xl xs:mt-48 " data-aos="fade-left">We Provide SEO Services For Agency</div>
-                <div className="sm: mt-3 mt-6 mx-0 text-white lg:text-base sm:text-sm sm:text-center text-left font-catamaran leading-8  lg:text-start lg:mx-0 md:tex-right text-slate-100 md:text-md sm:text-white sm:pr-20 sm:leading-[2rem]" data-aos="fade-right">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates rerum odio, corrupti, culpa a rem itaque similique autem tempore voluptatibus.
-                <div className="flex gap-2 md:gap-4 sm:gap-2 lg:gap-2 lg:mt-24 mx-0 justify-center lg:justify-start md:mt-1">
+ text-slate-100 text-center lg:text-start  lg:text-5xl sm:text-3xl  font-bold lg:leading-[4rem]  sm:leading-[4rem] sm:leading-[2rem] lg:mt-12 md:mt-48 lg:mx-0 sm:mt-36 sm:ml-10 sm:mr-10 xs:text-3xl xs:mt-48 md:text-5xl " data-aos="fade-left">We Provide SEO Services For Agency</div>
+                <div className="sm: mt-3 mt-6 mx-0 text-white lg:text-base sm:text-sm sm:text-center lg:text-left font-catamaran leading-8  lg:text-start lg:mx-0 md:tex-center md:text-center text-slate-100 md:text-md sm:text-white sm:pr-20 sm:leading-[2rem]" data-aos="fade-right">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates rerum odio, corrupti, culpa a rem itaque similique autem tempore voluptatibus.
+                <div className="flex gap-2 md:gap-4 sm:gap-2 lg:gap-2  mx-0 justify-center lg:justify-start md:mt-1 lg:pt-24 lg:pb-12 md:pt-12">
                     
-                </div>
-                <div >
-                        <button className="bg-white text-purple-700 hover:bg-purple-500 hover:text-white w-40 h-12 rounded font-bold transition-colors duration-150  rounded focus:shadow-outline ">
+                <button className="bg-white text-purple-700 hover:bg-purple-500 hover:text-white w-40 h-12 rounded font-bold transition-colors duration-150  rounded focus:shadow-outline ">
                             Lets Start
                         </button>
                         <button className="bg-purple-500 text-white hover:bg-white font-bold hover:text-slate-700 w-40 h-12 rounded  transition-colors duration-150  rounded focus:shadow-outline ml-5 ">
                             Contact Us
                         </button>
-                    </div>
+                        <br/>
+
                 </div>
+                
+                    </div>
+             
                
             </div>
 
@@ -46,7 +48,7 @@ const Hero = () => {
                     priority
                     fill
                     src='/images/1.png'
-                    className="max-w-full mt-24 position-absolute " data-aos="zoom-in"
+                    className="max-w-full mt-24 position-absolute lg:block md:hidden" data-aos="zoom-in"
 
                     alt="home-font"
                 />
@@ -55,14 +57,14 @@ const Hero = () => {
 
                         fill
                         src='/images/5.png'
-                        className="block w-min lg:mt-6 lg:-ml-44" data-aos="zoom-in-up"
+                        className=" w-min lg:mt-6 lg:-ml-44 lg:block md:hidden" data-aos="zoom-in-up"
 
                         alt="home-font"
                     />
                 </div>
                 <Image
                     fill
-                    className="  z-1 max-w-fit	mt-6 lg:ml-28  " data-aos="fade-up"
+                    className="  z-1 max-w-fit	mt-6 lg:ml-28 lg:block md:hidden  " data-aos="fade-up"
                     src='/images/2.png'
                     alt="home-font"
                 />
@@ -71,7 +73,7 @@ const Hero = () => {
 
                         fill
                         src='/images/8.png'
-                        className=" w-min  lg:ml-56 lg:mt-12 xl:mt-2" data-aos="zoom-in-up"
+                        className=" w-min  lg:ml-56 lg:mt-12 xl:mt-2  lg:block md:hidden" data-aos="zoom-in-up"
 
                         alt="home-font"
                     />
@@ -81,7 +83,7 @@ const Hero = () => {
 
                     fill
                     src='/images/3.png'
-                    className=" max-w-fit object-cover lg:-ml-28 mt-16 " data-aos="fade-right"
+                    className=" max-w-fit object-cover lg:-ml-28 mt-16 lg:block md:hidden " data-aos="fade-right"
 
                     alt="home-font"
                 />
