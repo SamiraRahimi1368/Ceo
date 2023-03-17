@@ -70,7 +70,7 @@ const menuItems = [
 ]
 const DesktopMenu = () => {
     return (
-        <nav className="md:hidden lg:block font-sans">
+        <nav className="md:hidden xs:hidden sm:hidden lg:block font-sans">
             <div className="container flex  items-center justify-between mx-auto ">
                 <div className=" w-full md:block md:w-auto " id="navbar-dropdown">
                     <ul className="flex flex-col border border-gray-100 rounded-lg text-white md:flex-row md:space-x-4 md:mt-0 md:text-sm md:font-medium md:border-0  dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700  lg:gap-2 lg:pt-6 2xl:text-2xl whitespace-nowrap ">
