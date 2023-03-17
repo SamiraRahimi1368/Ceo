@@ -3,42 +3,37 @@
 import DesktopMenu from "./DesktopMenu"
 import MobileMenu from "./MobileMenu"
 import { useState } from "react"
-const Header = () => {
+const Header = ({ menuItems }) => {
 
-   const [open, setOpen] = useState(false)
+   const [isOpen, setIsOpen] = useState(false)
 
-   const hamburger =
-      <svg
-         xmlns="http://www.w3.org/2000/svg"
-         height="48"
-         width="48"
-         className=" md:block lg:hidden fill-white text-right"
-      >
-         <path d="M6 36v-3h36v3Zm0-10.5v-3h36v3ZM6 15v-3h36v3Z" />
-      </svg>
+   const toggleMenu = () => {
+      setIsOpen(!isOpen)
+   }
+  
    return (
-      <div className="header mx-auto  justify-between grid grid-cols-3 flex w-full	 mx-auto  "
-      >
 
 
-         <div className="nav flex flex-col mx-auto mt-4 ">
+
+      <div className="header mx-auto  justify-between grid grid-cols-3 flex w-full	 mx-auto   ">
+
+
+         <div className="nav flex flex-col mx-auto mt-4  ">
             <img src="images/heder-logo.png">
             </img>
 
          </div>
          <nav className="lg:-mt-4">
-            <DesktopMenu />
-            <MobileMenu open={open} name='samira'/>
+            <DesktopMenu menuItems={menuItems} />
+            <div className="md:hidden">
+               <button onClick={toggleMenu} className="text-gray-500 hover:text-gray-700 focus:outline-none">
+
+               </button>
+            </div>
+            <MobileMenu open={open}/>
+            
          </nav>
-          {/* <button className="cursor-pointer text-white "
-            onClick={() => {
-               setOpen(!open)
-            }}
-         >
-            {
-               hamburger
-            }
-         </button>  */}
+        
 
          <div className="xl:mt-6 hidden lg:block flex flex-col mx-auto z-40">
             <button

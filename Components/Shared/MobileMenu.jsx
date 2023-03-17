@@ -1,5 +1,7 @@
-const ItemStyle = 'flex items-center justify-between w-full py-2 pl-3 pr-4 lg:text-base	xl:text-base 2xl:text-xl text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-black dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent lg:ml-6 '
+import React, { useState } from 'react';
 
+
+const ItemStyle = 'flex items-center justify-between w-full py-2 pl-3 pr-4 lg:text-base xl:text-base 2xl:text-xl text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-black dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent lg:ml-6 ';
 
 
 
@@ -41,7 +43,14 @@ const menuItems = [
 ]
 
 
+  
+//   button[aria-expanded="true"] svg {
+//     transform: rotate(90deg);
+//   }
+
 const MobileMenu = ({ open }) => {
+    const [showMobileMenu, setShowMobileMenu] = useState(false);
+
     const ItemStyle = 'p-5 border-b-5 text-lg font-bold'
     const style = {
         transform: `${open ? 'rotateX(0deg)' : 'rotateX(90deg)'}`
@@ -51,6 +60,49 @@ const MobileMenu = ({ open }) => {
             className="lg:hidden w-4/5 h-1/2 bg-white absolute top-20 left-0 right-0 mx-auto origin-top transition-all duration-1000"
             style={style}
         >
+             <button
+    className="w-8 h-8 filled-white rounded-md flex items-center justify-center focus:outline-none position- fixed
+    -top-12
+    right-2
+     z-10
+    focus:outline-none
+    "
+    onClick={() => setShowMobileMenu(!showMobileMenu)}
+  >
+    {showMobileMenu ? (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="h-12 w-12 text-gray-700 absolute   transition: transform 0.3s ease-in-out;
+        "
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          s stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M6 18L18 6M6 6l12 12"
+        />
+      </svg>
+    ) : (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="h-12 w-12 absolute right-0 -mr:6 text-gray-700"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M4 6h16M4 12h16M4 18h16"
+        />
+      </svg>
+    )}
+  </button>
+  {showMobileMenu && (
             <ul className="inline inline-block border border-gray-100 rounded-lg text-black md:flex-row md:space-x-4 md:mt-0 md:text-sm md:font-medium md:border-0  dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 lg:mt-8 lg:gap-2 lg:pt-6 2xl:text-2xl">
                         {
                             menuItems.map(item =>
@@ -97,6 +149,7 @@ const MobileMenu = ({ open }) => {
                         }
 
                     </ul>
+                    )}
         </div>
 
     )
