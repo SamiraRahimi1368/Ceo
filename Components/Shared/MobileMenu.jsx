@@ -1,159 +1,167 @@
 import React, { useState } from 'react';
 
 
-const ItemStyle = 'flex items-center justify-between w-full py-2 pl-3 pr-4 lg:text-base xl:text-base 2xl:text-xl text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-black dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent lg:ml-6 ';
+const ItemStyle = 'flex items-center justify-between w-full  lg:text-base xl:text-base 2xl:text-xl text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 md:w-auto lg:ml-6 ';
+
+const ItemStyleWithBorder = 'border-b border-gray-400';
 
 
 
 const menuItems = [
     {
-        title: 'home',
+        title: 'Home',
         url: '/'
     },
     {
-        title: 'about',
+        title: 'About',
         url: '/about'
     },
     {
-        title: 'projects',
+        title: 'Projects',
         url: '/projects',
         children: [
             {
-                title: 'project A',
+                title: 'Project A',
                 url: '/projcts/A'
             },
             {
-                title: 'project B',
+                title: 'Project B',
                 url: '/projcts/B'
             },
             {
-                title: 'project C',
+                title: 'Project C',
                 url: '/projcts/C'
             }
         ]
     },
     {
-        title: 'prices',
+        title: 'Prices',
         url: '/prices'
     },
     {
-        title: 'contact',
+        title: 'Contact',
         url: '/contact'
     },
 ]
 
 
-  
-//   button[aria-expanded="true"] svg {
-//     transform: rotate(90deg);
-//   }
-
 const MobileMenu = ({ open }) => {
     const [showMobileMenu, setShowMobileMenu] = useState(false);
 
-    const ItemStyle = 'p-5 border-b-5 text-lg font-bold'
+    const ItemStyle = 'p-5  text-lg '
     const style = {
-        transform: `${open ? 'rotateX(0deg)' : 'rotateX(90deg)'}`
+        transform: `${open ? 'rotateX(0deg)' : 'rotateX(90deg)'}`,
+        backgroundColor: `${showMobileMenu ? 'bg-slate-800' : ''}`
+
     }
     return (
         <div
-            className="lg:hidden w-4/5 h-1/2 bg-white absolute top-20 left-0 right-0 mx-auto origin-top transition-all duration-1000"
+            className=" bg-slate-800 lg:hidden w-auto h-auto  absolute top-20 left-0 right-0 mx-auto origin-top transition-all duration-1000 border border-t-white"
             style={style}
         >
-             <button
-    className="w-8 h-8 filled-white rounded-md flex items-center justify-center focus:outline-none position- fixed
-    -top-12
-    right-2
-     z-10
-    focus:outline-none
-    "
-    onClick={() => setShowMobileMenu(!showMobileMenu)}
-  >
-    {showMobileMenu ? (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-12 w-12 text-gray-700 absolute   transition: transform 0.3s ease-in-out;
+            <button
+                className="w-8 h-8 text-white rounded-md flex items-center justify-center focus:outline-none position- fixed
+                -top-12
+                right-2
+                z-10
+                focus:outline-none
+                "
+                onClick={() => setShowMobileMenu(!showMobileMenu)}
+            >
+                {showMobileMenu ? (
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-12 w-12 text-white  absolute   transition: transform 0.3s ease-in-out;
         "
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          s stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M6 18L18 6M6 6l12 12"
-        />
-      </svg>
-    ) : (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-12 w-12 absolute right-0 -mr:6 text-gray-700"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M4 6h16M4 12h16M4 18h16"
-        />
-      </svg>
-    )}
-  </button>
-  {showMobileMenu && (
-            <ul className="inline inline-block border border-gray-100 rounded-lg text-black md:flex-row md:space-x-4 md:mt-0 md:text-sm md:font-medium md:border-0  dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 lg:mt-8 lg:gap-2 lg:pt-6 2xl:text-2xl">
-                        {
-                            menuItems.map(item =>
-                                <li className="group relative flex items-center relative h-20">
-                                    <a
-                                        href={item.url}
-                                        id="dropdownNavbarLink"
-                                        data-dropdown-toggle="dropdownNavbar"
-                                        className={ItemStyle}
-                                    >
-                                        {item.title}
-                                        {
-                                            item.children?.length > 0 &&
-                                            <svg
-                                                className="fill-black group-hover:fill-indigo-400"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                height="20"
-                                                width="20"
-                                            >
-                                                <path d="m10 13.062-5-5L6.062 7 10 10.938 13.938 7 15 8.062Z" />
-                                            </svg>
-                                        }
-                                    </a>
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path
+                            s stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12"
+                        />
+                    </svg>
+                ) : (
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-12 w-12 absolute right-0 -mr:6 text-white"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M4 6h16M4 12h16M4 18h16"
+                        />
+                    </svg>
+                )}
+            </button>
+            {showMobileMenu && (
+                <ul className="inline inline-block  rounded-lg text-white md:flex-row  md:mt-0 md:text-sm 	  lg:mt-8 lg:gap-2 lg:pt-6 2xl:text-2xl">
+                    {
+                        menuItems.map(item =>
+                            <li className=" group relative flex items-center relative h-16 border-b border-gray-900 last:border-b-0 text-lg pl-6 	">
+                                <a
+                                    href={item.url}
+                                    id="dropdownNavbarLink"
+                                    data-dropdown-toggle="dropdownNavbar"
+                                    className={ItemStyle}
+                                >
+                                    {item.title}
                                     {
                                         item.children?.length > 0 &&
-                                        <ul className="invisible opacity-10 translate-y-8 group-hover:block group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-1000 absolute top-16  text-black ml-4 lg:w-52 xl:w-68 2xl:w-72 md:w-96 md:text-lg  mt-4 	 ">
-                                            {
-                                                item.children.map(child =>
-                                                    <li className="py-3 pl-4 hover:text-purple-600 border-b-2 border-purple-600  	last:border-b-0 ">
-                                                        <a
-                                                            href={child.url}
-                                                        >
-                                                            {
-                                                                child.title
-
-                                                            }
-                                                        </a>
-                                                    </li>)
-                                            }
-                                        </ul>
+                                        <svg
+        className="fill-white group-hover:fill-indigo-400"
+        xmlns="http://www.w3.org/2000/svg"
+        height="20"
+        width="20"
+    >
+        <path
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M12 5v14M5 12h14"
+        />
+    </svg>
                                     }
-                                </li>
-                            )
-                        }
+                                </a>
+                                {
+                                    item.children?.length > 0 &&
+                                    
+                                    <ul className="invisible opacity-10 translate-y-8 group-hover:block group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-1000 absolute top-16  text-white ml-4 lg:w-52 xl:w-68 2xl:w-72 md:w-96 md:font-light z-40  ;
+                                    mt-4 	 ">
+                                      
+                                        {
+                                            item.children.map(child =>
+                                                <li className="py-3 pl-4 hover:text-purple-600 ">
+                                                    <a
+                                                        href={child.url}
+                                                    >
+                                                        {
+                                                            child.title
 
-                    </ul>
-                    )}
+                                                        }
+                                                    </a>
+                                                </li>)
+                                        }
+                                    </ul>
+                                }
+                            </li>
+                        )
+                    }
+
+                </ul>
+            )}
         </div>
 
     )
 }
 
 export default MobileMenu
-   

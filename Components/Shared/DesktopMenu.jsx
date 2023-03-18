@@ -68,7 +68,7 @@ const menuItems = [
         url: '/contact'
     },
 ]
-const DesktopMenu = ( ) => {
+const DesktopMenu = () => {
     return (
         <nav className="md:hidden xs:hidden sm:hidden lg:block font-sans">
             <div className="container flex  items-center justify-between mx-auto ">

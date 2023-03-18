@@ -3,6 +3,7 @@
 import DesktopMenu from "./DesktopMenu"
 import MobileMenu from "./MobileMenu"
 import { useState } from "react"
+
 const Header = ({ menuItems }) => {
 
    const [isOpen, setIsOpen] = useState(false)
@@ -10,7 +11,7 @@ const Header = ({ menuItems }) => {
    const toggleMenu = () => {
       setIsOpen(!isOpen)
    }
-  
+
    return (
 
 
@@ -26,14 +27,14 @@ const Header = ({ menuItems }) => {
          <nav className="lg:-mt-4">
             <DesktopMenu menuItems={menuItems} />
             <div className="md:hidden">
-               <button onClick={toggleMenu} className="text-gray-500 hover:text-gray-700 focus:outline-none">
+               <button onClick={toggleMenu} className=" text-gray-500 hover:text-gray-700 focus:outline-none">
 
                </button>
             </div>
-            <MobileMenu open={open}/>
-            
+            <MobileMenu open={open} />
+
          </nav>
-        
+
 
          <div className="xl:mt-6 hidden lg:block flex flex-col mx-auto z-40">
             <button
