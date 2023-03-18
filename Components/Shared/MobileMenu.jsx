@@ -71,7 +71,7 @@ const MobileMenu = ({ open }) => {
                 {showMobileMenu ? (
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        className="h-12 w-12 text-white  absolute   transition: transform 0.3s ease-in-out;
+                        className="h-12 w-12 text-white right-0 mr-4 absolute   transition: transform 0.3s ease-in-out;
         "
                         fill="none"
                         viewBox="0 0 24 24"
@@ -87,7 +87,7 @@ const MobileMenu = ({ open }) => {
                 ) : (
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        className="h-12 w-12 absolute right-0 -mr:6 text-white"
+                        className="h-12 w-12 absolute right-0 mr-4 text-white"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -116,28 +116,29 @@ const MobileMenu = ({ open }) => {
                                     {
                                         item.children?.length > 0 &&
                                         <svg
-        className="fill-white group-hover:fill-indigo-400"
-        xmlns="http://www.w3.org/2000/svg"
-        height="20"
-        width="20"
-    >
-        <path
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M12 5v14M5 12h14"
-        />
-    </svg>
+                                            className=" fill-white h-12 w-12 text-white right-0  absolute -mt-6  transition: transform 0.3s ease-in-out;"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            height="20"
+                                            width="20"
+                                        >
+                                            <path
+                                                fill="none"
+                                                stroke="currentColor"
+                                                strokeWidth="2"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                d="M5 12h14M12 5v14"
+                                            />
+                                        </svg>
+
                                     }
-                                </a>
+                            </a>
                                 {
-                                    item.children?.length > 0 &&
-                                    
-                                    <ul className="invisible opacity-10 translate-y-8 group-hover:block group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-1000 absolute top-16  text-white ml-4 lg:w-52 xl:w-68 2xl:w-72 md:w-96 md:font-light z-40  ;
+                                item.children?.length > 0 &&
+
+                                    <ul className="invisible opacity-10 translate-y-8 group-hover:block group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-1000 absolute top-16  text-white ml-4 lg:w-52 xl:w-68 2xl:w-72 md:w-96 md:font-light ;
                                     mt-4 	 ">
-                                      
+
                                         {
                                             item.children.map(child =>
                                                 <li className="py-3 pl-4 hover:text-purple-600 ">
@@ -152,14 +153,15 @@ const MobileMenu = ({ open }) => {
                                                 </li>)
                                         }
                                     </ul>
-                                }
+                            }
                             </li>
-                        )
-                    }
+            )
+            }
 
-                </ul>
-            )}
-        </div>
+        </ul>
+    )
+}
+        </div >
 
     )
 }
