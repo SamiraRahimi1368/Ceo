@@ -22,7 +22,17 @@ const menuItems = [
         children: [
             {
                 title: 'Project A',
-                url: '/projcts/A'
+                url: '/projcts/A',
+                children: [
+                    {
+                        title: 'Subproject 1',
+                        url: '/projects/A/1'
+                    },
+                    {
+                        title: 'Subproject 2',
+                        url: '/projects/A/2'
+                    }
+                ]
             },
             {
                 title: 'Project B',
@@ -45,6 +55,7 @@ const menuItems = [
 ]
 
 
+
 const MobileMenu = ({ open }) => {
     const [showMobileMenu, setShowMobileMenu] = useState(false);
 
@@ -54,11 +65,15 @@ const MobileMenu = ({ open }) => {
         backgroundColor: `${showMobileMenu ? 'bg-slate-800' : ''}`
 
     }
+
+
     return (
+
         <div
             className=" bg-slate-800 lg:hidden w-auto h-auto  absolute top-20 left-0 right-0 mx-auto origin-top transition-all duration-1000 border border-t-white"
             style={style}
         >
+
             <button
                 className="w-8 h-8 text-white rounded-md flex items-center justify-center focus:outline-none position- fixed
                 -top-12
@@ -130,14 +145,16 @@ const MobileMenu = ({ open }) => {
                                                 d="M5 12h14M12 5v14"
                                             />
                                         </svg>
-
                                     }
-                            </a>
+
+
+                                </a>
                                 {
-                                item.children?.length > 0 &&
+                                    item.children?.length > 0 &&
 
                                     <ul className="invisible opacity-10 translate-y-8 group-hover:block group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-1000 absolute top-16  text-white ml-4 lg:w-52 xl:w-68 2xl:w-72 md:w-96 md:font-light ;
                                     mt-4 	 ">
+
 
                                         {
                                             item.children.map(child =>
@@ -149,18 +166,50 @@ const MobileMenu = ({ open }) => {
                                                             child.title
 
                                                         }
+                                                        {
+                                                            child.children?.length > 0 &&
+                                                            <svg
+                                                                className=" fill-white h-12 w-12 text-white right-0  absolute -mt-6  transition: transform 0.3s ease-in-out;"
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                height="20"
+                                                                width="20"
+                                                            >
+                                                                <path
+                                                                    fill="none"
+                                                                    stroke="currentColor"
+                                                                    strokeWidth="2"
+                                                                    strokeLinecap="round"
+                                                                    strokeLinejoin="round"
+                                                                    d="M5 12h14M12 5v14"
+                                                                />
+                                                            </svg>
+                                                        }
                                                     </a>
+                                                    
+                                                    {
+                                                    child.children && (
+                                                        <ul>
+                                                            {child.children.map(subchild => (
+                                                                <li className="py-3 pl-4 hover:text-purple-600" key={subchild.title}>
+                                                                    <a href={subchild.url}>{subchild.title}</a>
+                                                                </li>
+
+                                                            ))}
+                                                        </ul>
+                                                    )}
                                                 </li>)
                                         }
+
                                     </ul>
-                            }
+
+                                }
                             </li>
+                        )
+                    }
+
+                </ul>
             )
             }
-
-        </ul>
-    )
-}
         </div >
 
     )
