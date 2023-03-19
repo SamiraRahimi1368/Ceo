@@ -22,7 +22,7 @@ const Hero = () => {
             <div className='xl:mt-6'>
                 <h1 className='font-sans md:text-xl text-white lg:text-left text-lg font-bold sm:mt-48 sm:text-center sm:text-xl'>Welcome To Sceo
                 </h1>
-                <div className=" font-mono
+                <div className="font-nunito
  text-slate-100 text-center lg:text-start  lg:text-5xl sm:text-3xl  font-bold lg:leading-[4rem]  sm:leading-[4rem] sm:leading-[2rem] lg:mt-12 md:mt-6 xs:pt-56 lg:mx-0 sm:mt-4 sm:ml-10 sm:mr-10 xs:text-3xl xs:mt-56 md:text-4xl " data-aos="fade-left">We Provide SEO Services For Agency</div>
                 <div className="sm: mt-3 mt-6 mx-0 text-white lg:text-base sm:text-lg sm:text-center lg:text-left font-catamaran leading-8  lg:text-start lg:mx-0 md:tex-center md:text-center text-slate-100 md:pt-6  md:text-lg sm:mt-2  sm:text-white  sm:leading-[2rem]" data-aos="fade-right">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates rerum odio, corrupti, culpa a rem itaque similique autem tempore voluptatibus.
                 <div className="flex gap-2 md:gap-4 sm:gap-2 lg:gap-2  mx-0 justify-center lg:justify-start md:mt-1 lg:pt-24 lg:pb-36 md:pt-12 sm:pt-16">
