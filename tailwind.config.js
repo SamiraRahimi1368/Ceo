@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       fontFamily: {
         'nunito': ['Nunito'],
+        'rubik' : ['Rubik'],
       },
       animation: {
         'spin-slow': 'spin 3s linear infinite',

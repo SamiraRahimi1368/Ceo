@@ -3,6 +3,7 @@
 import DesktopMenu from "./DesktopMenu"
 import MobileMenu from "./MobileMenu"
 import { useState } from "react"
+import styled, { css } from 'styled-components';
 
 const Header = ({ menuItems }) => {
 
@@ -12,6 +13,41 @@ const Header = ({ menuItems }) => {
       setIsOpen(!isOpen)
    }
 
+   const HoverShutterInButton = styled.button`
+  background-color: blue;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.25rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0; /* Position the shutter effect at the left edge of the button */
+    right: 0; /* Position the shutter effect at the right edge of the button */
+    width: 0;
+    height: 100%;
+    background-color: white;
+    transform-origin: center;
+    transform: scaleX(0);
+    transition: all 0.7s ease-in-out;
+    z-index: 2; /* Set z-index to a higher value than the button */
+  }
+  
+  &:hover:before {
+    transform: scaleX(1);
+    width: 100%; /* Expand the shutter effect to cover the entire button */
+  }
+  
+  &:hover {
+    color: black;
+  }
+`;
    return (
 
 
@@ -31,16 +67,17 @@ const Header = ({ menuItems }) => {
 
                </button>
             </div>
-            <MobileMenu open={open} />
+            <MobileMenu open={isOpen} />
 
          </nav>
 
 
          <div className="xl:mt-6 hidden lg:block flex flex-col mx-auto z-40">
-            <button
-               className="bg-blue-700 brightness-80 text-white hover:bg-white hover:text-blue-700 w-36 h-12 mr-32 ml-10 mt:1 rounded  font-bold hover:transition-all  rounded  xl:mt-2 z-0 lg:w-28 lg:-mr-28 lg:mt-6 "
+            <HoverShutterInButton
+               className="w-36 h-12 mr-32 ml-10 mt-1 rounded"
             >
-               Sign Up</button>
+               Sign Up
+            </HoverShutterInButton>
          </div>
       </div >
 
