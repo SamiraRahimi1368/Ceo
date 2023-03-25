@@ -44,7 +44,6 @@ transition: all 0.3s ease-in-out;
 `;
 
 const Hero = ({ supertitle,title,description }) => {
-    console.log(supertitle)
     useEffect(() => {
         AOS.init({
             once: true,
@@ -87,7 +86,7 @@ const Hero = ({ supertitle,title,description }) => {
                 </div>
             </div>
 
-            <div className="lg:mr-10 xl:mt-44 lg:mt-36 sm:mr-24  mt-16 lg:max-w-full			 sm:w-4/5 sm:mx-auto md:w-2/3 max-width-screen-xl  relative grid lg:grid-cols-6 md:grid-cols-12 gap-4 aspect-square">
+            <div className="lg:mr-10 xl:mt-44 lg:mt-36 sm:mr-24  mt-16 lg:max-w-full sm:w-4/5 sm:mx-auto md:w-2/3 max-width-screen-xl  relative grid lg:grid-cols-6 md:grid-cols-12 gap-4 aspect-video">
 
                 <Image
                     priority
