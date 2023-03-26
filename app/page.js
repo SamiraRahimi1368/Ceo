@@ -10,7 +10,6 @@ export default async function Home(props) {
     <div>
       <Hero {...hero} />
       <AboutUs />
-      <Test />
     </div>
   )
 }

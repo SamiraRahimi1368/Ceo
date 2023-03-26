@@ -12,7 +12,7 @@ const Hero = () => {
 
     }, []);
     return <div
-        className="hero flex flex-col items-center -mt-24 sm:-mt-24 xs:mt-24  h-auto z-10 overflow-hidden md:bg-slate-100 sm:bg-slate-100 xs:bg-slate-100 " data-aos="fade-up"
+        className="hero flex flex-col items-center   h-auto  overflow-hidden md:bg-slate-100 sm:bg-slate-100 xs:bg-slate-100 " data-aos="fade-up"
     >
 
 

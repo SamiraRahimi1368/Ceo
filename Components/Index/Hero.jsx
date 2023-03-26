@@ -92,7 +92,7 @@ const Hero = ({ supertitle,title,description }) => {
                     priority
                     fill
                     src='/images/1.png'
-                    className="max-w-full mt-24 position-absolute lg:block md:hidden sm:hidden xs:hidden " data-aos="zoom-in"
+                    className="lg:max-w-full mt-24 position-absolute lg:block md:hidden sm:hidden xs:hidden  " data-aos="zoom-in"
 
                     alt="home-font"
                 />
@@ -108,7 +108,7 @@ const Hero = ({ supertitle,title,description }) => {
                 </div>
                 <Image
                     fill
-                    className="  z-1 max-w-fit	mt-6 lg:ml-28 lg:block md:hidden sm:hidden xs:hidden  " data-aos="fade-up"
+                    className="object-cover  z-1 max-w-fit	mt-6 lg:ml-28 lg:block md:hidden sm:hidden xs:hidden  " data-aos="fade-up"
                     src='/images/2.png'
                     alt="home-font"
                 />
@@ -132,11 +132,13 @@ const Hero = ({ supertitle,title,description }) => {
                     alt="home-font"
                 />
             </div>
+           
         </div>
-        <div className='relative w-full bg-center bg-top bg-repeat-x mt-12 h-12 bg-no-repeat'
+        <div className='relative w-full bg-center  bg-repeat-x h-3'
             style={{ backgroundImage: 'url(/images/wave-bg3.png)' }}>
         </div>
     </div>
+    
 }
 
 export default Hero

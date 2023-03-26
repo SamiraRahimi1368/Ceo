@@ -51,7 +51,6 @@ const Header = ({ menuItems }) => {
    return (
 
 
-
       <div className="header mx-auto  justify-between grid grid-cols-3 flex w-full	 mx-auto   ">
 
 
