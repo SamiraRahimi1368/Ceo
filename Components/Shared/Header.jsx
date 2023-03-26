@@ -14,39 +14,57 @@ const Header = ({ menuItems }) => {
    }
 
    const HoverShutterInButton = styled.button`
-  background-color: blue;
-  color: white;
-  font-size: 1rem;
-  font-weight: bold;
-  padding: 0.5rem 1.5rem;
-  border-radius: 0.25rem;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.3s ease-in-out;
-  
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0; /* Position the shutter effect at the left edge of the button */
-    right: 0; /* Position the shutter effect at the right edge of the button */
-    width: 0;
-    height: 100%;
-    background-color: white;
-    transform-origin: center;
-    transform: scaleX(0);
-    transition: all 0.7s ease-in-out;
-    z-index: 2; /* Set z-index to a higher value than the button */
-  }
-  
-  &:hover:before {
-    transform: scaleX(1);
-    width: 100%; /* Expand the shutter effect to cover the entire button */
-  }
-  
-  &:hover {
-    color: black;
-  }
+   .btn-holder {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50% , -50%);
+   }
+   .simple-btn {
+      text-decoration: none;
+      font-size: 1rem;
+      display: inline-block;
+      position: relative;
+      transition: all .4s ease;
+      text-align: center;
+      line-height: 60px;
+      width: 120px;
+      border-radius: 5px;
+      height: 50px;
+      color: white;
+      z-index: 1;
+     overflow: hidden;
+     background-color:#2154f2;
+     padding-bottom:10px;
+   }
+   .simple-btn:before,
+   .simple-btn:after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      height: 0%;
+      width: 100%;
+      z-index: -1;
+      background-color: #a157e7;
+      opacity: 0;
+      transition: all .4s ease-in;
+   }
+   .simple-btn:after {
+      bottom: 0;
+      top: inherit;
+
+   }
+   .simple-btn:hover:before,
+   .simple-btn:hover:after {
+      height: 50%;
+      opacity: 1;
+
+   }
+   .simple-btn:hover {
+      box-shadow: 0 3px 7px rgba(0,0,0,.14)
+
+   }
 `;
    return (
 
@@ -72,12 +90,12 @@ const Header = ({ menuItems }) => {
 
 
          <div className="xl:mt-6 hidden lg:block flex flex-col mx-auto z-40">
-            <HoverShutterInButton
-               className="w-36 h-12 mr-24 ml-6 mt-1 rounded"
+            <HoverShutterInButton className="font-rubik "
             >
-               Sign Up
+               <a href="https://youtu.be/7RviKhuax-E" class="simple-btn" target="_blank">Sign Up</a>
             </HoverShutterInButton>
          </div>
+
       </div >
 
    )

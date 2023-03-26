@@ -6,44 +6,60 @@ import Image from "next/image"
 import styled, { css } from 'styled-components';
 
 const HoverShutterInButton = styled.button`
-background-color: purple;
-color:white;
-font-size: 1rem;
-font-weight: bold;
-padding: 0.5rem 1.5rem;
-border-radius: 0.25rem;
-position: relative;
-overflow: hidden;
-transition: all 0.3s ease-in-out;
+.btn-holder {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+ }
+ .simple-btn {
+    text-decoration: none;
+    font-size: 1rem;
+    display: inline-block;
+    position: relative;
+    transition: all .4s ease;
+    text-align: center;
+    line-height: 60px;
+    width: 160px;
+    border-radius: 5px;
+    height: 50px;
+    color: black;
+    z-index: 1;
+   overflow: hidden;
+   background-color:white;
+   padding-bottom:10px;
+ }
+ .simple-btn:before,
+ .simple-btn:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 0%;
+    width: 100%;
+    z-index: -1;
+    background-color: #a157e7;
+    opacity: 0;
+    transition: all .4s ease-in;
+ }
+ .simple-btn:after {
+    bottom: 0;
+    top: inherit;
 
-&:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0; /* Position the shutter effect at the left edge of the button */
-  right: 0; /* Position the shutter effect at the right edge of the button */
-  width: 0;
-  height: 100%;
-  background-color: white;
-  transform-origin: center;
-  transform: scaleX(0);
-  transition: all 0.3s ease-in-out;
-  z-index: 1; /* Make sure the shutter effect is above the button content */
-}
+ }
+ .simple-btn:hover:before,
+ .simple-btn:hover:after {
+    height: 50%;
+    opacity: 1;
 
-&:hover:before {
-  transform: scaleX(1);
-  width: 100%; /* Expand the shutter effect to cover the entire button */
+ }
+ .simple-btn:hover {
+    box-shadow: 0 3px 7px rgba(0,0,0,.14)
 
-}
-
-&:hover {
-
-  color: red !important;
-}
+ }
 `;
 
-const Hero = ({ supertitle,title,description }) => {
+const Hero = ({ supertitle, title, description }) => {
     useEffect(() => {
         AOS.init({
             once: true,
@@ -51,7 +67,7 @@ const Hero = ({ supertitle,title,description }) => {
         });
 
     }, []);
-   
+
     return <div
         className="hero flex flex-col items-center -mt-24 sm:-mt-24 xs:mt-24 h-auto  z-10 overflow-hidden"
         style={{ background: 'linear-gradient(to bottom, #a157e7, #00429b)' }}>
@@ -71,18 +87,12 @@ const Hero = ({ supertitle,title,description }) => {
                 <div className="flex gap-2 md:gap-4 sm:gap-2 lg:gap-2  mx-0 justify-center lg:justify-start md:mt-1 lg:pt-24 lg:pb-36 md:pt-12 sm:pt-16">
 
 
-                    <HoverShutterInButton
-                        className="w-40 h-12  rounded "
-                    >
-                        Lets Start
+                    <HoverShutterInButton className="font-rubik ">
+                        <a href="https://youtu.be/7RviKhuax-E" class="simple-btn" target="_blank">Let's start</a>
                     </HoverShutterInButton>
-
-                    <HoverShutterInButton
-                        className="w-40 h-12 bg-purple-500 text-white  rounded "
-                    >
-                        Contact US
+                    <HoverShutterInButton className="font-rubik ml-6 ">
+                        <a href="https://youtu.be/7RviKhuax-E" class="simple-btn" target="_blank">Contact Us</a>
                     </HoverShutterInButton>
-                    <br />
                 </div>
             </div>
 
@@ -95,7 +105,7 @@ const Hero = ({ supertitle,title,description }) => {
                     className=" -ml-12 mt-24  object-cover lg:block md:hidden sm:hidden xs:hidden  " data-aos="zoom-in"
 
                     alt="home-font"
-                    
+
                 />
                 <div className="w-16 h-20 relative object-cover ">
                     <Image
@@ -136,13 +146,13 @@ const Hero = ({ supertitle,title,description }) => {
 
                 />
             </div>
-           
+
         </div>
         <div className='relative w-full bg-center bg-no-repeat bg-repeat-x h-3 '
             style={{ backgroundImage: 'url(/images/wave-bg3.png)' }}>
         </div>
     </div>
-    
+
 }
 
 export default Hero

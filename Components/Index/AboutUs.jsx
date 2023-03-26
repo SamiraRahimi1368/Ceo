@@ -3,6 +3,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import React, { useEffect } from 'react';
 import Image from "next/image"
+
 const Hero = () => {
     useEffect(() => {
         AOS.init({
@@ -55,13 +56,14 @@ const Hero = () => {
                     priority
                     fill
                     src='/images/about-img.png'
-                    className=" animate-bounce max-w-full h-auto xl:mt-14 lg:mt-6  md:-mt-6 position-absolute lg:block "
+                    className=" animate-bounce max-w-full h-auto xl:mt-12 lg:mt-6  md:-mt-6 position-absolute  xs:animate-none xs:transform-none lg:block "
                     alt="home-font"
                     style={{
                         animationDuration: '40s',
                         animationIterationCount: 'infinite',
                         animationTimingFunction: 'linear',
                         transform: 'translate(0.2px, -0.5px)',
+                        
 
                     }}
                 />
