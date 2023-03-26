@@ -51,7 +51,7 @@ const Header = ({ menuItems }) => {
    return (
 
 
-      <div className="header mx-auto  justify-between grid grid-cols-3 flex w-full	 mx-auto   ">
+      <div className="header mx-auto mr-9 justify-between flex flex-cols-3 flex w-full	 mx-auto   ">
 
 
          <div className="nav flex flex-col mx-auto mt-4  ">
@@ -73,7 +73,7 @@ const Header = ({ menuItems }) => {
 
          <div className="xl:mt-6 hidden lg:block flex flex-col mx-auto z-40">
             <HoverShutterInButton
-               className="w-36 h-12 mr-32 ml-10 mt-1 rounded"
+               className="w-36 h-12 mr-24 ml-6 mt-1 rounded"
             >
                Sign Up
             </HoverShutterInButton>

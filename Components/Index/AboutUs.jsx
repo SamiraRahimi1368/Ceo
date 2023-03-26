@@ -12,7 +12,7 @@ const Hero = () => {
 
     }, []);
     return <div
-        className="hero flex flex-col items-center   h-auto  overflow-hidden md:bg-slate-100 sm:bg-slate-100 xs:bg-slate-100 " data-aos="fade-up"
+        className="hero flex flex-col items-center   h-auto  overflow-hidden " data-aos="fade-up"
     >
 
 
@@ -20,14 +20,15 @@ const Hero = () => {
         <div
             className=" w-full h-auto px-4 lg:grid lg:grid-cols-2 lg:items-top lg:gap-12 lg:px-12 xl:px-20 max-w-screen-xl xl:mx-auto lg:mx-auto  lg:leading-4	">
             <div className='xl:mt-6'>
-                <h1 className='font-sans md:text-xl text-gray-700 underline	lg:mt-12 md:mt-6 sm:mt-6 lg:text-left text-lg font-bold sm:mt-48 sm:text-center sm:text-xl'>About Us
+                <h1 className='font-rubik md:text-xl text-gray-700 lg:mt-12 md:mt-6 sm:mt-6 lg:text-left text-lg font-bold sm:mt-48 sm:text-center sm:text-xl'>
+                    <span className="pb-2 border-gray-700 border-b">About Us</span>
                 </h1>
                 <div
                     className=" 
-                font-mono
+                    font-nunito
                 text-blue-900 text-center lg:text-start  lg:text-4xl sm:text-3xl  font-bold lg:leading-[4rem]  sm:leading-[4rem] sm:leading-[2rem] lg:mt-12 md:mt-6 xs:pt-56 lg:mx-0 sm:mt-4 sm:ml-10 sm:mr-10 xs:text-3xl xs:mt-56 md:text-4xl " >Grow Business Wif SEO
                 </div>
-                <p className="sm: mt-3 mt-6 mx-0 text-blue-700 lg:text-xl sm:text-lg sm:text-center lg:text-left font-catamaran leading-8 font-medium
+                <p className="font-nunito sm: mt-3 mt-6 mx-0 text-blue-700 lg:text-xl sm:text-lg sm:text-center lg:text-left font-catamaran leading-8 font-medium
                 lg:text-start lg:mx-0 md:tex-center md:text-center  md:pt-6  md:text-lg sm:mt-2    sm:leading-[2rem]">
                     Over 10 Years Sceo Helping Companies Reach Their Financial And Branding Goals.
 
@@ -54,10 +55,10 @@ const Hero = () => {
                     priority
                     fill
                     src='/images/about-img.png'
-                    className=" animate-bounce max-w-full xl:-mt-16 lg:mt-6  md:-mt-6 position-absolute lg:block "
+                    className=" animate-bounce max-w-full h-auto xl:mt-14 lg:mt-6  md:-mt-6 position-absolute lg:block "
                     alt="home-font"
                     style={{
-                        animationDuration: '20s',
+                        animationDuration: '40s',
                         animationIterationCount: 'infinite',
                         animationTimingFunction: 'linear',
                         transform: 'translate(0.2px, -0.5px)',

@@ -86,31 +86,34 @@ const Hero = ({ supertitle,title,description }) => {
                 </div>
             </div>
 
-            <div className="lg:mr-10 xl:mt-44 lg:mt-36 sm:mr-24  mt-16 lg:max-w-full sm:w-4/5 sm:mx-auto md:w-2/3 max-width-screen-xl  relative grid lg:grid-cols-6 md:grid-cols-12 gap-4 aspect-video">
+            <div className="xl:mt-44 lg:mt-36 ml-16 w-full mx-auto mt-16 relative grid lg:grid-cols-6 md:grid-cols-12 aspect-video">
 
                 <Image
                     priority
                     fill
                     src='/images/1.png'
-                    className="lg:max-w-full mt-24 position-absolute lg:block md:hidden sm:hidden xs:hidden  " data-aos="zoom-in"
+                    className=" -ml-12 mt-24  object-cover lg:block md:hidden sm:hidden xs:hidden  " data-aos="zoom-in"
 
                     alt="home-font"
+                    
                 />
                 <div className="w-16 h-20 relative object-cover ">
                     <Image
 
                         fill
                         src='/images/5.png'
-                        className=" w-min lg:mt-6 lg:-ml-44 lg:block md:hidden sm:hidden xs:hidden" data-aos="zoom-in-up"
+                        className=" w-min lg:mt-6 lg:-ml-44 lg:block md:hidden sm:hidden xs:hidden " data-aos="zoom-in-up"
 
                         alt="home-font"
+
                     />
                 </div>
                 <Image
                     fill
-                    className="object-cover  z-1 max-w-fit	mt-6 lg:ml-28 lg:block md:hidden sm:hidden xs:hidden  " data-aos="fade-up"
+                    className="object-cover  z-1 max-w-fit	mt-6 lg:ml-36 lg:block md:hidden sm:hidden xs:hidden  " data-aos="fade-up"
                     src='/images/2.png'
                     alt="home-font"
+
                 />
                 <div className="w-20 h-20 relative ">
                     <Image
@@ -127,14 +130,15 @@ const Hero = ({ supertitle,title,description }) => {
 
                     fill
                     src='/images/3.png'
-                    className=" max-w-fit object-cover lg:-ml-28 mt-16 lg:block md:hidden sm:hidden xs:hidden" data-aos="fade-right"
+                    className="object-cover max-w-fit object-cover lg:-ml-28 mt-16 lg:block md:hidden sm:hidden xs:hidden" data-aos="fade-right"
 
                     alt="home-font"
+
                 />
             </div>
            
         </div>
-        <div className='relative w-full bg-center  bg-repeat-x h-3'
+        <div className='relative w-full bg-center bg-no-repeat bg-repeat-x h-3 '
             style={{ backgroundImage: 'url(/images/wave-bg3.png)' }}>
         </div>
     </div>
