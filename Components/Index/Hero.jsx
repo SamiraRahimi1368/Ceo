@@ -88,10 +88,10 @@ const Hero = ({ supertitle, title, description }) => {
 
 
                     <HoverShutterInButton className="font-rubik ">
-                        <a href="https://youtu.be/7RviKhuax-E" class="simple-btn" target="_blank">Let's start</a>
+                        <a href="https://youtu.be/7RviKhuax-E" className="simple-btn" target="_blank">Let's start</a>
                     </HoverShutterInButton>
                     <HoverShutterInButton className="font-rubik ml-6 ">
-                        <a href="https://youtu.be/7RviKhuax-E" class="simple-btn" target="_blank">Contact Us</a>
+                        <a href="https://youtu.be/7RviKhuax-E" className="simple-btn" target="_blank">Contact Us</a>
                     </HoverShutterInButton>
                 </div>
             </div>
