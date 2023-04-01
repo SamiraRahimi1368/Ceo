@@ -89,10 +89,10 @@ const Header = ({ menuItems }) => {
          </nav>
 
 
-         <div className="xl:mt-6 hidden lg:block flex flex-col mx-auto z-40">
+         <div className="xl:mt-6 lg:mt-6 hidden lg:block flex flex-col mx-auto z-40">
             <HoverShutterInButton className="font-rubik "
             >
-               <a href="https://youtu.be/7RviKhuax-E" class="simple-btn" target="_blank">Sign Up</a>
+               <a href="https://youtu.be/7RviKhuax-E" className="simple-btn" target="_blank">Sign Up</a>
             </HoverShutterInButton>
          </div>
 
