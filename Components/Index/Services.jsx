@@ -1,10 +1,21 @@
 
 'use client'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import React, { useEffect } from 'react';
+
 const title = 'text-blue-700 w-36 h-16 pt-6 self-center font-bold  lg:-ml-6'
 const p = 'font-rubik md:w-48 w-36 mb-6  text-left lg:-ml-6 		'
 const div = 'lg:mr-10  sm:mr-24  lg:w-full lg:h-auto sm:w-4/5 sm:mx-auto md:w-2/3 max-width-screen-xl  relative grid lg:grid-cols-6 md:grid-cols-2 gap-2 aspect-square '
 const svg = 'bg-gray-400 w-14 h-12 rounded-full   justify-center items-center '
 const Services = () => {
+    useEffect(() => {
+        AOS.init({
+            once: true,
+            duration: 1000,
+        });
+
+    }, []);
     return (
         <div className="service flex flex-col items-center h-auto  overflow-hidden ">
             <div className=" w-full h-auto px-4 lg:grid lg:grid-cols-2 lg:items-top lg:gap-12 lg:px-6 xl:px-20 max-w-screen-xl xl:mx-auto lg:mx-auto  lg:leading-4	mt-6 font-nunito">
@@ -81,8 +92,8 @@ const Services = () => {
                     </div>
                 </div>
 
-                <div className='xl:mt-6 '>
-                    <h1 className='font-rubik md:text-xl text-gray-700 lg:mt-12 md:mt-6 sm:mt-6 lg:text-left text-lg font-bold sm:mt-48 sm:text-center sm:text-xl'>
+                <div className='xl:mt-6 ' data-aos="fade-up">
+                    <h1 className='font-rubik md:text-xl text-gray-700 lg:mt-12 md:mt-6 sm:mt-6 lg:text-left text-lg font-bold sm:mt-48 sm:text-center sm:text-xl' >
                         <span className="pb-2 border-gray-700 border-b">Features
                         </span>
                     </h1>
