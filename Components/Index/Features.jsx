@@ -17,6 +17,19 @@ const Features = ({ supertitle, title, description, ctaText, ctaLink, items }) =
         });
 
     }, []);
+    const getBackgroundColor = index => {
+        switch (index) {
+            case 0:
+
+                return 'bg-purple-200';
+            case 1:
+                return 'bg-yellow-200'
+
+            default:
+                break;
+        }
+    }
+
     return (
         // <div className="service flex flex-col items-center h-auto  overflow-hidden ">
         //     <div className=" w-full h-auto px-4 lg:grid lg:grid-cols-2 lg:items-top lg:gap-12 lg:px-6 xl:px-20 max-w-screen-xl xl:mx-auto lg:mx-auto  lg:leading-4	mt-6 font-nunito">
@@ -125,12 +138,12 @@ const Features = ({ supertitle, title, description, ctaText, ctaLink, items }) =
         // </div >
         <div>
             {
-                items.map(item =>
-                    <div className='w-48 aspect-square rounded-lg py-5 px-4 flex flex-col justify-between items-center bg-red-400'>
+                items.map((item, index) =>
+                    <div className={`w-48 aspect-square rounded-lg py-5 px-4 flex flex-col justify-between items-center ${getBackgroundColor(index)}`} >
                         <div
-                            className='bg-white text-black fill-black'
+                            className='bg-white w-10 h-10 rounded-full text-black fill-black'
                             dangerouslySetInnerHTML={{ __html: item.svg }}
-                            />
+                        />
                         <h2>{item.title}</h2>
                         <p>{item.description}</p>
                     </div>
