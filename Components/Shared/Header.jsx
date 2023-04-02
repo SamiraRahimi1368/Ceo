@@ -12,60 +12,6 @@ const Header = ({ menuItems }) => {
    const toggleMenu = () => {
       setIsOpen(!isOpen)
    }
-
-   const HoverShutterInButton = styled.button`
-   .btn-holder {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50% , -50%);
-   }
-   .simple-btn {
-      text-decoration: none;
-      font-size: 1rem;
-      display: inline-block;
-      position: relative;
-      transition: all .4s ease;
-      text-align: center;
-      line-height: 60px;
-      width: 120px;
-      border-radius: 5px;
-      height: 50px;
-      color: white;
-      z-index: 1;
-     overflow: hidden;
-     background-color:#2154f2;
-     padding-bottom:10px;
-   }
-   .simple-btn:before,
-   .simple-btn:after {
-      position: absolute;
-      content: "";
-      top: 0;
-      left: 0;
-      height: 0%;
-      width: 100%;
-      z-index: -1;
-      background-color: #a157e7;
-      opacity: 0;
-      transition: all .4s ease-in;
-   }
-   .simple-btn:after {
-      bottom: 0;
-      top: inherit;
-
-   }
-   .simple-btn:hover:before,
-   .simple-btn:hover:after {
-      height: 50%;
-      opacity: 1;
-
-   }
-   .simple-btn:hover {
-      box-shadow: 0 3px 7px rgba(0,0,0,.14)
-
-   }
-`;
    return (
 
 
@@ -90,10 +36,10 @@ const Header = ({ menuItems }) => {
 
 
          <div className="xl:mt-6 lg:mt-6 hidden lg:block flex flex-col mx-auto z-40">
-            <HoverShutterInButton className="font-rubik "
-            >
-               <a href="https://youtu.be/7RviKhuax-E" className="simple-btn" target="_blank">Sign Up</a>
-            </HoverShutterInButton>
+            <button class="shutter bg-blue-800 relative px-4 py-2 rounded text-white  hover:text-blue-800 overflow-hidden z-10 group">
+               <span>Sign Up</span>
+               <span class="absolute top-[50%] left-[50%] -translate-y-[50%] -translate-x-[50%] w-full z-50 group-hover:text-purple-900 transition">Sign Up</span>
+            </button>
          </div>
 
       </div >

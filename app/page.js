@@ -14,8 +14,8 @@ export default async function Home(props) {
 
   return (
     <div>
-      {/* <Hero {...hero} />
-      <AboutUs {...about} /> */}
+      <Hero {...hero} />
+      <AboutUs {...about} />
       <Features {...features}/>
       <Services {...services} />
     </div>
