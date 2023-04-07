@@ -1,29 +1,32 @@
 'use client'
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css/pagination'
 import 'swiper/css';
 
-import Image from "next/image"
 
 const Services = ({ items }) => {
+
   return (
-    <div className='items-center max-w-screen-md mx-auto '>
-    <div className="flex justify-center items-center max-w-screen-md mx-auto">
-      <div className='text-center xl:mt-6' data-aos="fade-up">
+    <div className=' 	 max-w-screen-lg mx-auto '>
+    <div className="  max-w-screen-lg mx-auto">
+      <div className=' xl:mt-6' data-aos="fade-up">
         <h1 className='font-rubik md:text-xl text-gray-700 lg:mt-12 md:mt-6 sm:mt-6 lg:text-center text-lg font-bold sm:mt-48 sm:text-center sm:text-xl'>
           <span className="pb-2 border-gray-700 border-b">Our Services</span>
         </h1>
         <h1 className="font-nunito text-blue-900 text-center lg:text-center md:text-3xl lg:text-4xl sm:text-3xl font-bold lg:leading-[4rem] sm:leading-[4rem] sm:leading-[2rem] lg:mt-9 md:mt-6 xs:pt-56 lg:mx-0 sm:mt-4 sm:ml-10 sm:mr-10 xs:text-3xl xs:mt-56 md:text-4xl">
           You Take Growth For Business
         </h1>
-        <p className="font-nunito sm:mt-3 mt-6 text-gray-700 lg:text-md sm:text-lg sm:text-center lg:text-center leading-8 font-normal lg:mx-0 md:tex-center md:text-center xl:p-0 md:pt-6 md:p-12 md:text-lg sm:mt-2 sm:leading-[2rem]">
+        <p className="font-nunito sm:mt-3 mt-6 text-gray-700 lg:text-md sm:text-lg sm:text-center lg:text-center leading-8 font-normal lg:mx-0 md:tex-center md:text-center xl:p-0 md:pt-6 md:p-12 md:text-lg sm:mt-2 sm:leading-[2rem] ">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidiunt labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.
         </p>
       </div>
 
     </div>
+    <div className='realtive'>
+    
     <Swiper
-            spaceBetween={20}
+            spaceBetween={40}
             slidesPerView={3}
             slidesPerGroup={4}
             // breakpoints={{
@@ -34,31 +37,45 @@ const Services = ({ items }) => {
             //         slidesPerView: 3
             //     }
             // }}
-            className="grid max-w-screen-lg grid-cols-3 gap-x-10 gap-y-20 mt-10  select-none cursor-grab md:flex rounded-xl p-8 md:p-0 dark:bg-slate-800"
+            className="grid lg:max-w-screen-lg grid-cols-3 gap-x-20 gap-y-20 mt-10  md:m-6 select-none cursor-grab md:flex rounded-xl p-8 md:p-0 dark:bg-slate-800 mb-12 swiper-container swiper-pagination "
+            pagination={{ clickable: true }}
+            
         >
+          
             {
                 items.map(item => <SwiperSlide
-                    className="border rounded-lg p-5 m:10 bg-slate-50 text-blues  "
+                    className="border rounded-lg p-5  mx-auto  bg-slate-50 text-white 	  " 
+                    style={{ background: 'linear-gradient(to bottom, #a157e7, #00429b)' }}
                     
                 >
                      <div className="w-20 h-20 mx-auto relative mt-6 
-                    border-red-400">
-                        <Image
-                            fill
-                            alt="svg"
-                            src={`/${item.svg}`}
-                            className=" w-20 md:w-20 md:h-auto border-4 border-indigo-200 border-b-indigo-500 rounded-full border-l-indigo-500 md:h-auto  rounded-full"
-                        />
+                    border-red-400" 
+                   
+                    dangerouslySetInnerHTML={{ __html: item.svg }}
+                    >
                     </div>
 
-                  
-                    <h3 className='text-slate-900 font-bold flex justify-center mt-5 font-lg'> {item.title} </h3>
-                    <h3 className='text-slate-700 dark:text-slate-500 flex justify-center' > {item.description} </h3>
-                    <h3 className='text-slate-700 dark:text-slate-500 flex justify-center' > {item.link} </h3>
+                    <img src="../images/services-shape.png" class="absolute top-0 left-0 w-full h-full opacity-0 hover:opacity-100 transition-opacity duration-300 transition-transform hover:scale-110" />
+
+                    <h3 className='text-white font-bold flex  text-left mt-5 font-lg font-rubik '> {item.title} </h3>
+                    <h3 className='text-white dark:text-slate-500 flex text-left font-rubik pt-4' > {item.description} </h3>
+                    <a className='text-white dark:text-slate-500 flex text-left pt-6' > Read More {item.link} </a>
 
                 </SwiperSlide>)
             }
         </Swiper>
+    </div>
+
+        <style>
+        {`
+        .swiper-pagination-bullet {
+          background-color: #4299e1;
+          width:20px;
+          height:20px
+        }
+        `}
+      </style>
+
 
 
     </div>

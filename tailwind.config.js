@@ -9,10 +9,17 @@ module.exports = {
     extend: {
       fontFamily: {
         'nunito': ['Nunito'],
-        'rubik' : ['Rubik'],
+        'rubik': ['Rubik'],
       },
       animation: {
-        'spin-slow': 'spin 3s linear infinite',
+        imageBounce: "imageBounce 4s infinite"
+      },
+      keyframes: {
+        imageBounce: {
+          '0%': { 'transform': 'translateY(10px)' },
+          '50%': { 'transform': 'translateY(0)' },
+          '100%': { 'transform': 'translateY(10px)' },
+        }
       }
 
     },
