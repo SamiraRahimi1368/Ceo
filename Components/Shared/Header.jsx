@@ -15,17 +15,17 @@ const Header = ({ menuItems }) => {
    return (
 
 
-      <div className="header mx-auto mr-9 justify-between flex flex-cols-3 flex w-full	 mx-auto   ">
+      <div className="header mx-auto mr-9 justify-between flex flex-cols-3 flex w-full	 mx-auto     ">
 
 
-         <div className="nav flex flex-col mx-auto mt-4  ">
+         <div className="nav flex flex-col mx-auto mt-4 ">
             <img src="images/heder-logo.png">
             </img>
 
          </div>
-         <nav className="lg:-mt-4">
+         <nav className="lg:-mt-4 ">
             <DesktopMenu menuItems={menuItems} />
-            <div className="md:hidden">
+            <div className="md:block">
                <button onClick={toggleMenu} className=" text-gray-500 hover:text-gray-700 focus:outline-none">
 
                </button>

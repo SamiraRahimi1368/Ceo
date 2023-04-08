@@ -15,14 +15,14 @@ const Hero = ({ supertitle, title, description }) => {
     }, []);
 
     return <div
-        className="hero flex flex-col items-center -mt-24 sm:-mt-24 xs:mt-24 h-auto  z-10 overflow-hidden"
+        className="hero flex flex-col items-center -mt-24 sm:-mt-36 xs:mt-24 lg:h-auto z-10 overflow-hidden"
         style={{ background: 'linear-gradient(to bottom, #a157e7, #00429b)' }}>
-        <div className=" w-full h-auto px-4 lg:grid lg:grid-cols-2 lg:items-top lg:gap-12 lg:px-12 xl:px-20 max-w-screen-xl xl:mx-auto lg:mx-auto  lg:leading-4	">
+        <div className=" w-full sm:h-96 md:h-96 lg:h-auto px-4 lg:grid lg:grid-cols-2 lg:items-top lg:gap-12 lg:px-12 xl:px-20 max-w-screen-xl xl:mx-auto lg:mx-auto  lg:leading-4	">
             <div className='xl:mt-6'>
 
                 <div>
 
-                    <h1 className='font-rubik md:text-xl text-white lg:text-left lg:text-base	 font-bold sm:mt-48 sm:text-center sm:text-xl'>{supertitle}</h1>
+                    <h1 className='font-rubik md:text-xl text-white lg:text-left lg:text-base	md:mt-24 font-bold sm:mt-48 sm:text-center sm:text-xl'>{supertitle}</h1>
                     <h2 className="font-nunito
                   text-slate-100 text-center lg:text-start  lg:text-5xl sm:text-3xl  font-bold lg:leading-[4rem]  sm:leading-[4rem] sm:leading-[2rem] lg:mt-9 md:mt-6 xs:pt-56 lg:mx-0 sm:mt-4 sm:ml-10 sm:mr-10 xs:text-3xl xs:mt-56 md:text-4xl " data-aos="fade-left" >{title}</h2>
                     <div className="sm: mt-3 mt-6 mx-0 text-white lg:text-base sm:text-lg sm:text-center lg:text-left font-catamaran leading-8  lg:text-start lg:mx-0 md:tex-center md:text-center text-slate-100 md:pt-6  md:text-lg sm:mt-2  sm:text-white  sm:leading-[2rem]" data-aos="fade-right">{description}</div>
