@@ -42,10 +42,10 @@ const Seo = () => {
 
 
                     </div> */}
-                        <div class="flex items-center bg-white h-24 rounded-full px-4">
+                        <div class="flex items-center bg-white h-16 rounded-full pl-6 shadow-lg mt-12">
                             <input type="search" placeholder="search your domian name here" class="bg-transparent outline-none w-full" />
 
-                            <button class="w-32 h-12 shutter hover:bg-purple-600  bg-blue-700 relative px-4 py-2 rounded text-white hover:text-purple-900  overflow-hidden z-10 group font-base rounded-r-full h-16 w-40 font-rubik">
+                            <button class="shutter hover:bg-purple-600  bg-blue-700 relative  rounded text-white hover:text-purple-900  overflow-hidden z-10 group font-base rounded-r-full h-16 w-40 font-rubik">
                         <span>Check now</span>
                         <span class=" absolute top-[50%] left-[50%] -translate-y-[50%] -translate-x-[50%] w-full z-50 group-hover:text-purple-900 transition">Check now</span>
                     </button>
