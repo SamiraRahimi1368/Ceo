@@ -5,6 +5,9 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    clipPath: {
+      mypolygon: "polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 1rem))",
+    },
 
     extend: {
       fontFamily: {
@@ -24,5 +27,7 @@ module.exports = {
 
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-clip-path'),
+  ],
 }

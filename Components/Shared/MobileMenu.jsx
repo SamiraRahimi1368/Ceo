@@ -70,7 +70,7 @@ const MobileMenu = ({ open }) => {
     return (
 
         <div
-            className=" bg-slate-800 lg:hidden w-auto h-auto  absolute top-20 left-0 right-0 mx-auto origin-top transition-all duration-1000 border border-t-white"
+            className=" bg-slate-800  w-auto h-auto  absolute top-20 left-0 right-0 mx-auto origin-top transition-all duration-1000 border border-t-white"
             style={style}
         >
 

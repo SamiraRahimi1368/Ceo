@@ -3,7 +3,6 @@
 import DesktopMenu from "./DesktopMenu"
 import MobileMenu from "./MobileMenu"
 import { useState } from "react"
-import styled, { css } from 'styled-components';
 
 const Header = ({ menuItems }) => {
 

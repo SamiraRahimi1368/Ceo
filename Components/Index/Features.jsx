@@ -52,11 +52,11 @@ const Features = ({ supertitle, title, description, ctaText, ctaLink, items }) =
 
     return (
         <div className='relative'>
-            <div className='w-full mx-auto flex justify-center mx-auto  h-auto  overflow-hidden  '>
+            <div className='w-full mx-auto flex justify-center mx-auto   h-auto  overflow-hidden  '>
                 {
-                    <div className='w-full lg:grid lg:grid-cols-2 md:grid md:grid-cols-1 mx-auto  pl-12 pr-6  '>
+                    <div className='w-full lg:grid lg:grid-cols-2 md:grid   mx-auto  pl-12 pr-6  '>
                         {items.map((item, index) => (
-                            <div className={`xl:w-64 lg:w-52  aspect-square rounded-lg py-12 px-6 flex flex-col justify-between items-center ${getBackgroundColor(index)} ${getMargin(index)}`}>
+                            <div className={`xl:w-64 lg:w-52  aspect-square rounded-lg py-12 px-6 flex flex-col  justify-between items-center ${getBackgroundColor(index)} ${getMargin(index)}`}>
 
                                 <div className='bg-blue-200 w-10 h-10 rounded-full text-blue-500 p-2' dangerouslySetInnerHTML={{ __html: item.svg }} />
 
@@ -70,7 +70,7 @@ const Features = ({ supertitle, title, description, ctaText, ctaLink, items }) =
                     </div>
 
                 }
-                <div className='  lg:h-auto sm:w-4/5 sm:mx-auto w-72  max-width-screen-lg lg:pr-16 relative aspect-square ' data-aos="fade-up">
+                <div className=' lg:h-auto sm:w-4/5 sm:mx-auto w-72  max-width-screen-lg lg:pr-16 relative aspect-square ' data-aos="fade-up">
                     <h1 className='font-rubik md:text-xl text-gray-700 lg:mt-12 md:mt-6 sm:mt-6 lg:text-left text-lg font-bold sm:mt-48 sm:text-center sm:text-xl' >
                         <span className="pb-2 border-gray-700 border-b">Features
                         </span>

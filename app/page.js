@@ -2,6 +2,8 @@ import Hero from "@/Components/Index/Hero"
 import AboutUs from '@/Components/Index/AboutUs'
 import Services from "@/Components/Index/Services"
 import Features from "@/Components/Index/Features"
+import Customers from "@/Components/Index/Customers"
+import Seo from "@/Components/Index/Seo"
 
 export default async function Home(props) {
 
@@ -11,6 +13,8 @@ export default async function Home(props) {
   const { key: aboutKey, ...about } = data.sections.find(i => i.key === 'about')
   const { key: servicesKey, ...services } = data.sections.find(i => i.key === 'services')
   const { key: featuresKey, ...features } = data.sections.find(i => i.key === 'features')
+  // const { key: customersKey, ...customers } = data.sections.find(i => i.key === 'customers')
+
 
   return (
     <div>
@@ -18,6 +22,8 @@ export default async function Home(props) {
       <AboutUs {...about} />
       <Features {...features}/>
       <Services {...services} />
+      {/* <Customers {...customers}/> */}
+      <Seo />
     </div>
   )
 }
