@@ -57,12 +57,11 @@ const menuItems = [
 
 
 const MobileMenu = ({ open }) => {
-    const [showMobileMenu, setShowMobileMenu] = useState(false);
 
     const ItemStyle = 'p-5  text-lg '
     const style = {
         transform: `${true ? 'rotateX(0deg)' : 'rotateX(90deg)'}`,
-        backgroundColor: `${showMobileMenu ? 'bg-slate-800' : ''}`
+        backgroundColor: `${open ? 'bg-slate-800' : ''}`
 
     }
 
@@ -73,18 +72,16 @@ const MobileMenu = ({ open }) => {
             className=" bg-slate-800  w-auto h-auto  absolute top-20 left-0 right-0 mx-auto origin-top transition-all duration-1000 border border-t-white"
             style={style}
         >
-
-          
             {open && (
-                <ul className="inline inline-block  rounded-lg text-white md:flex-row  md:mt-0 md:text-sm 	  lg:mt-8 lg:gap-2 lg:pt-6 2xl:text-2xl">
+                <ul className="inline inline-block  rounded-lg text-white md:flex-row  md:mt-0 md:text-sm 	  lg:mt-8 lg:gap-2 lg:pt-6 2xl:text-2xl ">
                     {
                         menuItems.map(item =>
-                            <li className=" group relative flex items-center relative h-16 border-b border-gray-900 last:border-b-0 text-lg pl-6 	">
+                            <li className=" group relative border-b border-gray-900 last:border-b-0 text-lg pl-6 py-3	">
                                 <a
                                     href={item.url}
-                                    id="dropdownNavbarLink"
-                                    data-dropdown-toggle="dropdownNavbar"
                                     className={ItemStyle}
+                                    onClick={() => console.log('hamid')}
+
                                 >
                                     {item.title}
                                     {
@@ -111,8 +108,7 @@ const MobileMenu = ({ open }) => {
                                 {
                                     item.children?.length > 0 &&
 
-                                    <ul className="invisible opacity-10 translate-y-8 group-hover:block group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-1000 absolute top-16  text-white ml-4 lg:w-52 xl:w-68 2xl:w-72 md:w-96 md:font-light ;
-                                    mt-4 	 ">
+                                    <ul className="ml-10">
 
 
                                         {
