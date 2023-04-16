@@ -40,7 +40,7 @@ const Hero = ({ supertitle, title, description }) => {
                         <span>Contact Now</span>
                         <span class="absolute top-[50%] left-[50%] -translate-y-[50%] -translate-x-[50%] w-full z-50 group-hover:text-purple-900 transition font-base">Contact Now</span>
                     </button>
-                   
+
                 </div>
             </div>
 

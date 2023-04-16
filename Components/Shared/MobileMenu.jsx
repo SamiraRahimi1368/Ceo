@@ -61,7 +61,7 @@ const MobileMenu = ({ open }) => {
 
     const ItemStyle = 'p-5  text-lg '
     const style = {
-        transform: `${open ? 'rotateX(0deg)' : 'rotateX(90deg)'}`,
+        transform: `${true ? 'rotateX(0deg)' : 'rotateX(90deg)'}`,
         backgroundColor: `${showMobileMenu ? 'bg-slate-800' : ''}`
 
     }
@@ -74,49 +74,8 @@ const MobileMenu = ({ open }) => {
             style={style}
         >
 
-            <button
-                className="w-8 h-8 text-white rounded-md flex items-center justify-center focus:outline-none position- fixed
-                -top-12
-                right-2
-                z-10
-                focus:outline-none
-                "
-                onClick={() => setShowMobileMenu(!showMobileMenu)}
-            >
-                {showMobileMenu ? (
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-12 w-12 text-white right-0 mr-4 absolute   transition: transform 0.3s ease-in-out;
-        "
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                    >
-                        <path
-                            s stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M6 18L18 6M6 6l12 12"
-                        />
-                    </svg>
-                ) : (
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-12 w-12 absolute right-0 mr-4 text-white"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                    >
-                        <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M4 6h16M4 12h16M4 18h16"
-                        />
-                    </svg>
-                )}
-            </button>
-            {showMobileMenu && (
+          
+            {open && (
                 <ul className="inline inline-block  rounded-lg text-white md:flex-row  md:mt-0 md:text-sm 	  lg:mt-8 lg:gap-2 lg:pt-6 2xl:text-2xl">
                     {
                         menuItems.map(item =>
@@ -185,18 +144,18 @@ const MobileMenu = ({ open }) => {
                                                             </svg>
                                                         }
                                                     </a>
-                                                    
-                                                    {
-                                                    child.children && (
-                                                        <ul>
-                                                            {child.children.map(subchild => (
-                                                                <li className="py-3 pl-4 hover:text-purple-600" key={subchild.title}>
-                                                                    <a href={subchild.url}>{subchild.title}</a>
-                                                                </li>
 
-                                                            ))}
-                                                        </ul>
-                                                    )}
+                                                    {
+                                                        child.children && (
+                                                            <ul>
+                                                                {child.children.map(subchild => (
+                                                                    <li className="py-3 pl-4 hover:text-purple-600" key={subchild.title}>
+                                                                        <a href={subchild.url}>{subchild.title}</a>
+                                                                    </li>
+
+                                                                ))}
+                                                            </ul>
+                                                        )}
                                                 </li>)
                                         }
 

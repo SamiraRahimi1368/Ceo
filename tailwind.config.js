@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -7,6 +9,10 @@ module.exports = {
   theme: {
     clipPath: {
       mypolygon: "polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 1rem))",
+    },
+    screens: {
+      'xs': '360px',
+      ...defaultTheme.screens,
     },
 
     extend: {
@@ -24,7 +30,6 @@ module.exports = {
           '100%': { 'transform': 'translateY(10px)' },
         }
       }
-
     },
   },
   plugins: [
