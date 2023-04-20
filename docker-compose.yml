@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  site:
+    image: node:lts-bullseye-slim
+    container_name: Ceo
+    ports:
+      - 3000:3000
+    volumes:
+      - /Samira/Ceo:/Ceo
+    command: >
+      bash -c
+      "
+      tail -f /dev/null
+      "
