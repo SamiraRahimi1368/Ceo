@@ -29,6 +29,7 @@ const Customers = () => {
 
                     {
                         items.map(item => <SwiperSlide
+                            key={item.id}
                             className="border rounded-lg p-5  mx-auto  bg-slate-50 text-white 	  "
                             style={{ background: 'linear-gradient(to bottom, #a157e7, #00429b)' }}
 
@@ -40,7 +41,7 @@ const Customers = () => {
                             >
                             </div>
 
-                            <img src="../images/services-shape.png" class="absolute top-0 left-0 w-full h-full opacity-0 hover:opacity-100 transition-opacity duration-300 transition-transform hover:scale-110" />
+                            <img src="../images/services-shape.png" className="absolute top-0 left-0 w-full h-full opacity-0 hover:opacity-100 transition-opacity duration-300 transition-transform hover:scale-110" />
 
                             <h3 className='text-white font-bold flex  text-left mt-5 font-lg font-rubik '> {item.title} </h3>
                             <h3 className='text-white dark:text-slate-500 flex text-left font-rubik pt-4' > {item.description} </h3>

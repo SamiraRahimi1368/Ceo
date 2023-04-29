@@ -36,12 +36,12 @@ const Seo = ({
                     </div>
 
                     <div className="sm:mt-3 mx-0 text-gray-700 lg:text-base sm:text-lg sm:text-center lg:text-left font-catamaran leading-8  lg:text-start lg:mx-0 md:tex-center md:text-center  md:pt-6  md:text-lg sm:mt-2  sm:leading-[2rem]" >{description}
-                        <div class="flex items-center bg-white h-16 rounded-full pl-6 shadow-lg mt-12">
-                            <input type="search" placeholder="search your domian name here" class="bg-transparent outline-none w-full" />
+                        <div className="flex items-center bg-white h-16 rounded-full pl-6 shadow-lg mt-12">
+                            <input type="search" placeholder="search your domian name here" className="bg-transparent outline-none w-full" />
 
-                            <button class="shutter hover:bg-purple-600  bg-blue-700 relative  rounded text-white hover:text-purple-900  overflow-hidden z-10 group font-base rounded-r-full h-16 w-40 font-rubik">
+                            <button className="shutter hover:bg-purple-600  bg-blue-700 relative  rounded text-white hover:text-purple-900  overflow-hidden z-10 group font-base rounded-r-full h-16 w-40 font-rubik">
                                 <span>Check now</span>
-                                <span class=" absolute top-[50%] left-[50%] -translate-y-[50%] -translate-x-[50%] w-full z-50 group-hover:text-purple-900 transition">Check now</span>
+                                <span className=" absolute top-[50%] left-[50%] -translate-y-[50%] -translate-x-[50%] w-full z-50 group-hover:text-purple-900 transition">Check now</span>
                             </button>
 
                         </div>
@@ -61,7 +61,7 @@ const Seo = ({
                         src='/images/serach-img.png'
                         className=" animate-bounce max-w-full h-auto xl:mt-12 lg:mt-6  md:-mt-6 position-absolute md:animate-none "
                         alt="home-font"
-                        class="animate-imageBounce"
+                        className="animate-imageBounce"
                     />
                     {/* <div className="bg-blue-500 h-40 w-full" style={{ clipPath: 'polygon(100% 0, 100% 100%, 0 100%, 0 100%)' }}>
 

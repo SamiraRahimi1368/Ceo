@@ -76,7 +76,10 @@ const MobileMenu = ({ open }) => {
                 <ul className="inline inline-block  rounded-lg text-white md:flex-row  md:mt-0 md:text-sm 	  lg:mt-8 lg:gap-2 lg:pt-6 2xl:text-2xl ">
                     {
                         menuItems.map(item =>
-                            <li className=" group relative border-b border-gray-900 last:border-b-0 text-lg pl-6 py-3	">
+                            <li
+                                key={item.id}
+                                className=" group relative border-b border-gray-900 last:border-b-0 text-lg pl-6 py-3	"
+                            >
                                 <a
                                     href={item.url}
                                     className={ItemStyle}
@@ -113,7 +116,10 @@ const MobileMenu = ({ open }) => {
 
                                         {
                                             item.children.map(child =>
-                                                <li className="py-3 pl-4 hover:text-purple-600 ">
+                                                <li
+                                                    key={child.id}
+                                                    className="py-3 pl-4 hover:text-purple-600 "
+                                                >
                                                     <a
                                                         href={child.url}
                                                     >
@@ -145,7 +151,10 @@ const MobileMenu = ({ open }) => {
                                                         child.children && (
                                                             <ul>
                                                                 {child.children.map(subchild => (
-                                                                    <li className="py-3 pl-4 hover:text-purple-600" key={subchild.title}>
+                                                                    <li
+                                                                        key={subchild.id}
+                                                                        className="py-3 pl-4 hover:text-purple-600"
+                                                                    >
                                                                         <a href={subchild.url}>{subchild.title}</a>
                                                                     </li>
 

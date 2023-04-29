@@ -1,4 +1,3 @@
-
 'use client'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -56,15 +55,18 @@ const Features = ({ supertitle, title, description, ctaText, ctaLink, items }) =
                 {
                     <div className='w-full lg:grid lg:grid-cols-2 md:grid   mx-auto  pl-12 pr-6  '>
                         {items.map((item, index) => (
-                            <div className={`xl:w-64 lg:w-52  aspect-square rounded-lg py-12 px-6 flex flex-col  justify-between items-center ${getBackgroundColor(index)} ${getMargin(index)}`}>
+                            <div
+                                key={item.id}
+                                className={`xl:w-64 lg:w-52  aspect-square rounded-lg py-12 px-6 flex flex-col  justify-between items-center ${getBackgroundColor(index)} ${getMargin(index)}`}
+                            >
 
                                 <div className='bg-blue-200 w-10 h-10 rounded-full text-blue-500 p-2' dangerouslySetInnerHTML={{ __html: item.svg }} />
 
 
                                 <h2 className='font-nunito text-blue-800 font-bold'>{item.title}</h2>
                                 <p className='font-rubik text-gray-700 '>{item.description}</p>
-                                <img src="../images/features-card-shape-1.png" class="absolute top-0 left-14 w-24 h-12 opacity-0 hover:opacity-100 transition-opacity duration-300 transition-transform hover:scale-110" />
-                                <img src="../images/features-card-shape-1.png" class="absolute bottom-0 right-14 w-24 h-12 opacity-0 hover:opacity-100 transition-opacity duration-300 transition-transform hover:scale-110" />
+                                <img src="../images/features-card-shape-1.png" className="absolute top-0 left-14 w-24 h-12 opacity-0 hover:opacity-100 transition-opacity duration-300 transition-transform hover:scale-110" />
+                                <img src="../images/features-card-shape-1.png" className="absolute bottom-0 right-14 w-24 h-12 opacity-0 hover:opacity-100 transition-opacity duration-300 transition-transform hover:scale-110" />
                             </div>
                         ))}
                     </div>
