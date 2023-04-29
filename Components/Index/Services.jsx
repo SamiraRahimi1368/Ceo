@@ -8,8 +8,6 @@ import { Pagination } from "swiper";
 
 const Services = ({ items }) => {
 
-    console.log(items)
-
     return (
         <div className='max-w-screen-lg mx-auto '>
             <div className="  max-w-screen-lg mx-auto">
