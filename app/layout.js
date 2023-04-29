@@ -1,4 +1,5 @@
 import './globals.css'
+import 'tailwindcss/tailwind.css'
 import Header from '@/Components/Shared/Header'
 
 const Layout = ({ children }) => {
