@@ -15,9 +15,9 @@ const Header = ({ menuItems }) => {
    return (
 
 
-      <div className="header lg:mx-auto mr-9 justify-between flex flex-cols-3 flex w-full	 items-center px-4">
+      <div className="header lg:mx-auto  justify-between flex flex w-full	 items-center px-4">
 
-         <div className="nav flex flex-col lg:mx-auto mt-4 ">
+         <div className="nav flex flex-col lg:mx-auto mt-4 lg:pr-36 xl:pr-56 2xl:pr-9 ">
             <img src="images/heder-logo.png">
             </img>
 
