@@ -55,13 +55,13 @@ const Features = ({
   };
 
   return (
-    <div className="relative mt-36">
+    <div className="relative mt-24">
       <div className="w-full mx-auto lg:flex justify-center mx-auto   h-auto  overflow-hidden  ">
         {
-          <div className="w-full gap-6 md:grid-cols-2 md:grid   mx-auto  pl-12 pr-6  ">
+          <div className="w-full gap-6 md:grid-cols-2 md:grid   mx-auto md:pl-24 sm:p-48 lg:pl-24 pr-6 md:p-12 sm:p-2 ">
             {items.map((item, index) => (
               <div
-                className={`xl:w-64 lg:w-52  aspect-square rounded-lg py-12 px-6 flex flex-col  justify-between items-center ${getBackgroundColor(
+                className={`xl:w-64 lg:w-52  sm:w-64 aspect-square rounded-lg py-12 px-6 flex flex-col  justify-between items-center ${getBackgroundColor(
                   index
                 )} ${getMargin(index)}`}
               >
@@ -90,13 +90,13 @@ const Features = ({
           className=" lg:h-auto sm:w-4/5 sm:mx-auto w-72  max-width-screen-lg lg:pr-16 relative aspect-square "
           data-aos="fade-up"
         >
-          <h1 className="font-rubik md:text-xl text-gray-700 lg:mt-12  lg:text-left text-lg font-bold sm:mt-48 sm:text-center sm:text-xl">
+          <h1 className="font-rubik md:text-xl text-gray-700 lg:mt-12 md:mt-6 lg:text-left text-lg font-bold sm:mt-48 sm:text-center sm:text-xl">
             <span className="pb-2 border-gray-700 border-b">Features</span>
           </h1>
           <div
             className=" 
                  font-nunito
-                 text-blue-900 text-center lg:text-start md:text-3xl lg:text-4xl sm:text-3xl  font-bold lg:leading-[4rem]  sm:leading-[4rem] sm:leading-[2rem] lg:mt-12 md:mt-6 xs:pt-56 lg:mx-0 sm:mt-4 sm:ml-10 sm:mr-10 xs:text-3xl xs:mt-56 md:text-4xl  "
+                 text-blue-900 text-center lg:text-start md:text-3xl lg:text-4xl sm:text-3xl  font-bold lg:leading-[4rem]  sm:leading-[4rem] sm:leading-[2rem]  md:mt-6 xs:pt-34 lg:mx-0 sm:mt-4 sm:ml-10 sm:mr-10 xs:text-3xl xs:mt-56 md:text-4xl  "
           >
             Create Awesome Service With Our Tools
           </div>

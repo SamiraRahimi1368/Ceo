@@ -13,7 +13,7 @@ const Services = ({ items }) => {
           <h1 className="font-rubik md:text-xl text-gray-700 lg:mt-12 md:mt-6 sm:mt-6 lg:text-center text-lg font-bold sm:mt-48 sm:text-center sm:text-xl">
             <span className="pb-2 border-gray-700 border-b">Our Services</span>
           </h1>
-          <h1 className="font-nunito text-blue-900 text-center lg:text-center md:text-3xl lg:text-4xl sm:text-3xl font-bold lg:leading-[4rem] sm:leading-[4rem] sm:leading-[2rem] lg:mt-9 md:mt-6 xs:pt-56 lg:mx-0 sm:mt-4 sm:ml-10 sm:mr-10 xs:text-3xl xs:mt-56 md:text-4xl">
+          <h1 className="font-nunito text-blue-900 text-center lg:text-center md:text-3xl lg:text-4xl sm:text-3xl font-bold lg:leading-[4rem] sm:leading-[4rem] sm:leading-[2rem] lg:mt-9 md:mt-6 xs:pt-6 lg:mx-0 sm:mt-4 sm:ml-10 sm:mr-10 xs:text-3xl xs:mt-56 md:text-4xl">
             You Take Growth For Business
           </h1>
           <p className="font-nunito sm:mt-3 mt-6 text-gray-700 lg:text-md sm:text-lg sm:text-center lg:text-center leading-8 font-normal lg:mx-0 md:tex-center md:text-center xl:p-0 md:pt-6 md:p-12 md:text-lg sm:mt-2 sm:leading-[2rem] ">

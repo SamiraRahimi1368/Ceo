@@ -24,17 +24,17 @@ const AboutUs = ({ supertitle, title, subtitle, description }) => {
                 <div
                     className=" 
                     font-nunito
-                text-blue-900 text-center lg:text-start  lg:text-4xl sm:text-3xl  font-bold lg:leading-[4rem]  sm:leading-[4rem] sm:leading-[2rem] lg:mt-12 md:mt-6 xs:pt-56 lg:mx-0 sm:mt-4 sm:ml-10 sm:mr-10 xs:text-3xl xs:mt-56 md:text-4xl " >{title}
+                text-blue-900 text-center lg:text-start  lg:text-4xl sm:text-3xl  font-bold lg:leading-[4rem]  sm:leading-[4rem] sm:leading-[2rem]  md:mt-6 xs:pt-12 lg:mx-0 sm:mt-4 sm:ml-10 sm:mr-10 xs:text-3xl xs:mt-12 md:text-4xl lg:pt-6" >{title}
                 </div>
                 <p className="font-nunito sm: mt-3 mt-6 mx-0 text-blue-700 lg:text-xl sm:text-lg sm:text-center lg:text-left font-catamaran leading-8 font-medium
                 lg:text-start lg:mx-0 md:tex-center md:text-center  md:pt-6  md:text-lg sm:mt-2    sm:leading-[2rem]">
                     {subtitle}
 
                 </p>
-                <div className="sm: mt-3 mt-6 mx-0 text-gray-700 lg:text-base sm:text-lg sm:text-center lg:text-left font-catamaran leading-8  lg:text-start lg:mx-0 md:tex-center md:text-center  md:pt-6  md:text-lg sm:mt-2  sm:leading-[2rem]" >{description}
+                <div className="sm: mt-3 mt-6 mx-0 text-gray-700 lg:text-base sm:text-lg sm:text-center lg:text-left font-catamaran leading-8  lg:text-start lg:mx-0 md:tex-center md:text-center   md:text-lg sm:mt-2  md:mt-4 sm:leading-[2rem]" >{description}
 
 
-                    <div className="flex gap-2 md:gap-4 sm:gap-2 lg:gap-2  mx-0 justify-center lg:justify-start md:mt-1 lg:pt-24 lg:pb-12 md:pt-12 sm:pt-16">
+                    <div className="flex gap-2 md:gap-4 sm:gap-2 lg:gap-2  mx-0 justify-center lg:justify-start md:mt-1 lg:pt-16 lg:pb-12 md:pt-12 sm:pt-16">
 
                         <button className="bg-blue-900 text-white hover:bg-purple-500  w-40 h-12 rounded font-bold transition-colors duration-150  rounded focus:shadow-outline ">
                             Learn More
