@@ -2,16 +2,25 @@
 const nextConfig = {
   experimental: {
     appDir: true,
-    
   },
   googleFonts: {
     fonts: [
       {
-        family: 'Inter',
-        weights: ['400', '700'],
+        family: "Inter",
+        weights: ["400", "700"],
       },
     ],
   },
-
-}
-module.exports = nextConfig
+  images: {
+    domains: ["api.sceo.itcodes.ca"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "api.sceo.itcodes.ca",
+        port: "",
+        pathname: "/image/resize",
+      },
+    ],
+  },
+};
+module.exports = nextConfig;

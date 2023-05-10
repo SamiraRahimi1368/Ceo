@@ -55,10 +55,6 @@ const Seo = ({ supertitle, title, description, image, items }) => {
             alt="home-font"
             class="animate-imageBounce"
           />
-          {/* <div className="bg-blue-500 h-40 w-full" style={{ clipPath: 'polygon(100% 0, 100% 100%, 0 100%, 0 100%)' }}>
-
-                
-</div> */}
         </div>
       </div>
     </div>

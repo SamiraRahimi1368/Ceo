@@ -4,7 +4,7 @@ import "aos/dist/aos.css";
 import React, { useEffect } from "react";
 import Image from "next/image";
 
-const Hero = ({ supertitle, title, description }) => {
+const Hero = ({ supertitle, title, description,firstCtaText,secondCtaText }) => {
   useEffect(() => {
     AOS.init({
       once: true,
@@ -40,15 +40,15 @@ const Hero = ({ supertitle, title, description }) => {
 
           <div className="flex gap-2 md:gap-4 sm:gap-2 lg:gap-2  mx-0 justify-center lg:justify-start md:mt-1 lg:pt-24 lg:pb-36 md:pt-12 sm:pt-16">
             <button class="w-32 h-12 shutter hover:bg-purple-500  bg-white relative px-4 py-2 rounded text-gray-900 hover:text-purple-900  overflow-hidden z-10 group font-base">
-              <span>Let's start</span>
+              <span>{firstCtaText}</span>
               <span class=" absolute top-[50%] left-[50%] -translate-y-[50%] -translate-x-[50%] w-full z-50 group-hover:text-purple-900 transition">
-                Let's start
+                {firstCtaText}
               </span>
             </button>
             <button class="shutter bg-purple-500 relative px-4 py-2 rounded text-white  hover:text-purple-900 overflow-hidden z-10 group">
-              <span>Contact Now</span>
+              <span>{secondCtaText}</span>
               <span class="absolute top-[50%] left-[50%] -translate-y-[50%] -translate-x-[50%] w-full z-50 group-hover:text-purple-900 transition font-base">
-                Contact Now
+                {secondCtaText}
               </span>
             </button>
           </div>

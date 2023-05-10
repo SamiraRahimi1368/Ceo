@@ -91,30 +91,26 @@ const Features = ({
           data-aos="fade-up"
         >
           <h1 className="font-rubik md:text-xl text-gray-700 lg:mt-12 md:mt-6 lg:text-left text-lg font-bold sm:mt-48 sm:text-center sm:text-xl">
-            <span className="pb-2 border-gray-700 border-b">Features</span>
+            <span className="pb-2 border-gray-700 border-b">{supertitle}</span>
           </h1>
           <div
             className=" 
                  font-nunito
                  text-blue-900 text-center lg:text-start md:text-3xl lg:text-4xl sm:text-3xl  font-bold lg:leading-[4rem]  sm:leading-[4rem] sm:leading-[2rem]  md:mt-6 xs:pt-34 lg:mx-0 sm:mt-4 sm:ml-10 sm:mr-10 xs:text-3xl xs:mt-56 md:text-4xl  "
           >
-            Create Awesome Service With Our Tools
+            {title}
           </div>
           <p
             className="font-nunito sm: mt-3 mt-6 mx-0 text-gray-700 lg:text-lg sm:text-lg sm:text-center lg:text-left  leading-8 font-normal		
                  lg:text-start lg:-ml-12 xl:-ml-0 lg:mx-0 md:tex-center md:text-center xl:p-0 md:pt-6 md:p-12 md:text-lg sm:mt-2    sm:leading-[2rem]"
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ut
-            harum voluptatum, magni adipisci in eos quo expedita nemo.
-            Dignissimos nemo repellendus officiis laboriosam veniam cumque
-            obcaecati omnis adipisci illo amet consectetur adipisicing. Omnis ut
-            harum voluptatum, magni adipisci in eos quo expedita nemo.
-            Dignissimos repellendus officiis.
+           {description}
           </p>
 
           <div className="flex gap-2 md:gap-4 sm:gap-2 lg:gap-2  mx-0 justify-center lg:justify-start md:mt-1 lg:pt-9 lg:pb-12 md:pt-4 sm:pt-16">
-            <button className="bg-blue-900 text-white hover:bg-purple-500  w-40 h-12 rounded font-bold transition-colors duration-150 md:mb-6 rounded focus:shadow-outline ">
-              About Us{" "}
+            <button className="bg-blue-900 text-white hover:bg-purple-500  w-40 h-12 rounded font-bold transition-colors duration-150 md:mb-6 rounded focus:shadow-outline " href={ctaLink}>
+              {ctaText}
+              
             </button>
           </div>
         </div>
