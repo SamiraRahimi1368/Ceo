@@ -56,7 +56,7 @@ const AboutUs = ({ supertitle, title, subtitle, description }) => {
                     src='/images/about-img.png'
                     className=" animate-bounce max-w-full h-auto xl:mt-12 lg:mt-6  md:-mt-6 position-absolute md:animate-none "
                     alt="home-font"
-                    class="animate-imageBounce"
+                    className="animate-imageBounce"
                 />
 
             </div>

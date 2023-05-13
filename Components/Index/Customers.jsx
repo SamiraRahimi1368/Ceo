@@ -9,9 +9,7 @@ const Customers = ({ items }) => {
   return (
     <div className="mt-12 w-full mx-auto flex justify-center mx-auto   h-auto  rounded-lg border-red-300">
       <div className="realtive">
-        <div className="customers-pagination mb-10 ">
-
-        </div>
+        <div className="customers-pagination mb-10 "></div>
         <Swiper
           spaceBetween={40}
           slidesPerView={3}

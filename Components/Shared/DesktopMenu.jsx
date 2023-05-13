@@ -75,8 +75,11 @@ const DesktopMenu = () => {
                 <div className=" w-full md:block md:w-auto " id="navbar-dropdown">
                     <ul className="flex flex-col border border-gray-100 rounded-lg text-white md:flex-row md:space-x-4 md:mt-0 md:text-sm md:font-medium md:border-0  dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700  lg:gap-2 lg:pt-6 2xl:text-2xl whitespace-nowrap ">
                         {
-                            menuItems.map(item =>
-                                <li className="group relative flex items-center relative h-20 ">
+                            menuItems.map((item, index) =>
+                                <li
+                                    key={index}
+                                    className="group relative flex items-center relative h-20 "
+                                >
                                     <a
                                         href={item.url}
                                         id="dropdownNavbarLink"
@@ -100,8 +103,11 @@ const DesktopMenu = () => {
                                         item.children?.length > 0 &&
                                         <ul className="invisible opacity-10 translate-y-8 group-hover:block group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-1000 absolute top-16 bg-white text-black ml-4 lg:w-52 xl:w-68 2xl:w-72  mt-4  border-t border-blue-700 border-t-2 z-50 	">
                                             {
-                                                item.children.map(child =>
-                                                    <li className="py-3 pl-4 border-b-2 border-gray-100 border-lg border-slate-200 	first:bg-slate-200 first:text-blue-700 hover:text-blue-700 last:border-0 hover:bg-slate-200 ">
+                                                item.children.map((child, childIndex) =>
+                                                    <li
+                                                        key={childIndex}
+                                                        className="py-3 pl-4 border-b-2 border-gray-100 border-lg border-slate-200 	first:bg-slate-200 first:text-blue-700 hover:text-blue-700 last:border-0 hover:bg-slate-200 "
+                                                    >
                                                         <a
                                                             href={child.url}
                                                         >
