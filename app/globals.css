@@ -18,6 +18,10 @@
 
 @layer components {
   .shutter {
-    @apply after:top-0 after:left-0 after:z-10 after:bg-white after:absolute after:h-full after:w-0 hover:after:w-1/2 after:transition-all after:duration-500 before:top-0 before:right-0 before:z-10 before:bg-white before:absolute before:h-full before:w-0 hover:before:w-1/2 before:transition-all before:duration-500
+    @apply after:top-0 after:left-0 after:z-10 after:bg-white after:absolute after:h-full after:w-0 hover:after:w-1/2 after:transition-all after:duration-500 before:top-0 before:right-0 before:z-10 before:bg-white before:absolute before:h-full before:w-0 hover:before:w-1/2 before:transition-all before:duration-500;
   }
+}
+
+.swiper-pagination {
+  bottom: -20px;
 }

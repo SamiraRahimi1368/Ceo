@@ -21,6 +21,7 @@ const Services = ({ supertitle, title, description, items }) => {
           </p>
         </div>
       </div>
+      <div className="services-pagination mb-10 "></div>
       <div className="realtive">
         <Swiper
           spaceBetween={40}
