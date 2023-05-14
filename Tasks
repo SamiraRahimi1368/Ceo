@@ -13,10 +13,23 @@ Post Page
 FAQ
 Page 404
 Pagination
+    FirstPage
+    PreviousPage
+    CurrentPage
+    Pagelinks
+    NextPage
+    LastPage
+    PageSize
+    GoToPage
+    Stats
+    
 Typescript
 Stepper
 Hook
-Custom Hook
 Post API
+Seo
+Routing
+    Link
+    Navigate
 
 
