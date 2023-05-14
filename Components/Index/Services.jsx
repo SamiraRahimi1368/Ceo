@@ -21,7 +21,7 @@ const Services = ({ supertitle, title, description, items }) => {
           </p>
         </div>
       </div>
-      <div className="services-pagination mb-10 "></div>
+      <div className="services-pagination mb-10 fill-black "></div>
       <div className="realtive">
         <Swiper
           spaceBetween={40}
@@ -43,7 +43,7 @@ const Services = ({ supertitle, title, description, items }) => {
         >
           {items.map((item) => (
             <SwiperSlide
-              className="border rounded-lg p-5  mx-auto  bg-slate-50 text-white 	  "
+              className="border rounded-lg p-5  mx-auto m-12 bg-slate-50 text-white 	  "
               style={{
                 background: "linear-gradient(to bottom, #a157e7, #00429b)",
               }}

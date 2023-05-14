@@ -5,7 +5,10 @@ import Features from "@/Components/Index/Features";
 import Customers from "@/Components/Index/Customers";
 import Seo from "@/Components/Index/Seo";
 import Statistics from "@/Components/Index/Statistics";
+import Testimonials from "@/Components/Index/Testimonials";
+import useData from "@/Hooks/useData";
 // import Testimonials from "@/Components/Index/Testimonials"
+import Pricing from "@/Components/Index/Pricing";
 
 export default async function Home(props) {
   const response = await fetch(
@@ -30,6 +33,14 @@ export default async function Home(props) {
   const { key: customersKey, ...customers } = data.sections.find(
     (i) => i.key === "customers"
   );
+  // const { key: testimonialsKey, ...testimonials } = data.sections.find(
+  //   (i) => i.key === "testimonials"
+  // );
+
+  // const { hero, about, services, features, seo, customers } = useData(
+  //   "https://api.sceo.itcodes.ca/page/data?key=home",
+  //   ["hero", "about", "services", "features", "seo", "customers"]
+  // );
 
   return (
     <div>
@@ -40,7 +51,7 @@ export default async function Home(props) {
       <Customers {...customers} />
       <Seo {...seo} />
       <Statistics />
-      {/* <Testimonials/> */}
+      {/* <Testimonials {...testimonials} /> */}
     </div>
   );
 }

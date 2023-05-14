@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use client";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -10,12 +9,6 @@ const div =
   "lg:mr-10  sm:mr-24  lg:w-full lg:h-auto sm:w-4/5 sm:mx-auto md:w-2/3 max-width-screen-xl  relative aspect-square mx-auto ";
 const svg =
   "bg-gray-400 w-14 h-12 rounded-full   justify-center items-center  ";
-=======
-'use client'
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import React, { useEffect } from 'react';
->>>>>>> 59b7df897e4f4154a8ffe555fc7a3dc0ecc1cdae
 
 const Features = ({
   supertitle,
@@ -61,7 +54,6 @@ const Features = ({
     }
   };
 
-<<<<<<< HEAD
   return (
     <div className="relative mt-24">
       <div className="w-full mx-auto lg:flex justify-center mx-auto   h-auto  overflow-hidden  ">
@@ -103,38 +95,6 @@ const Features = ({
           </h1>
           <div
             className=" 
-=======
-    return (
-        <div className='relative'>
-            <div className='w-full mx-auto flex justify-center mx-auto   h-auto  overflow-hidden  '>
-                {
-                    <div className='w-full lg:grid lg:grid-cols-2 md:grid   mx-auto  pl-12 pr-6  '>
-                        {items.map((item, index) => (
-                            <div
-                                key={item.id}
-                                className={`xl:w-64 lg:w-52  aspect-square rounded-lg py-12 px-6 flex flex-col  justify-between items-center ${getBackgroundColor(index)} ${getMargin(index)}`}
-                            >
-
-                                <div className='bg-blue-200 w-10 h-10 rounded-full text-blue-500 p-2' dangerouslySetInnerHTML={{ __html: item.svg }} />
-
-
-                                <h2 className='font-nunito text-blue-800 font-bold'>{item.title}</h2>
-                                <p className='font-rubik text-gray-700 '>{item.description}</p>
-                                <img src="../images/features-card-shape-1.png" className="absolute top-0 left-14 w-24 h-12 opacity-0 hover:opacity-100 transition-opacity duration-300 transition-transform hover:scale-110" />
-                                <img src="../images/features-card-shape-1.png" className="absolute bottom-0 right-14 w-24 h-12 opacity-0 hover:opacity-100 transition-opacity duration-300 transition-transform hover:scale-110" />
-                            </div>
-                        ))}
-                    </div>
-
-                }
-                <div className=' lg:h-auto sm:w-4/5 sm:mx-auto w-72  max-width-screen-lg lg:pr-16 relative aspect-square ' data-aos="fade-up">
-                    <h1 className='font-rubik md:text-xl text-gray-700 lg:mt-12 md:mt-6 sm:mt-6 lg:text-left text-lg font-bold sm:mt-48 sm:text-center sm:text-xl' >
-                        <span className="pb-2 border-gray-700 border-b">Features
-                        </span>
-                    </h1>
-                    <div
-                        className=" 
->>>>>>> 59b7df897e4f4154a8ffe555fc7a3dc0ecc1cdae
                  font-nunito
                  text-blue-900 text-center lg:text-start md:text-3xl lg:text-4xl sm:text-3xl  font-bold lg:leading-[4rem]  sm:leading-[4rem] sm:leading-[2rem]  md:mt-6 xs:pt-34 lg:mx-0 sm:mt-4 sm:ml-10 sm:mr-10 xs:text-3xl xs:mt-56 md:text-4xl  "
           >
@@ -159,8 +119,4 @@ const Features = ({
   );
 };
 
-<<<<<<< HEAD
 export default Features;
-=======
-export default Features
->>>>>>> 59b7df897e4f4154a8ffe555fc7a3dc0ecc1cdae

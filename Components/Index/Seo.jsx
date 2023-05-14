@@ -46,7 +46,7 @@ const Seo = ({ supertitle, title, description, image, items }) => {
             <div className="flex gap-2 mt-4">
               {items.map((item) => (
                 <span
-                  className="py-2 px-5 rounded-lg "
+                  className="py-2 px-5 rounded-lg text-white font-bold"
                   style={{
                     backgroundColor: item.bg,
                   }}

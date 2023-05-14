@@ -116,7 +116,6 @@ const MobileMenu = ({ open }) => {
                         )}
                       </a>
 
-<<<<<<< HEAD
                       {child.children && (
                         <ul>
                           {child.children.map((subchild) => (
@@ -125,112 +124,6 @@ const MobileMenu = ({ open }) => {
                               key={subchild.title}
                             >
                               <a href={subchild.url}>{subchild.title}</a>
-=======
-    }
-
-
-    return (
-
-        <div
-            className=" bg-slate-800  w-auto h-auto  absolute top-20 left-0 right-0 mx-auto origin-top transition-all duration-1000 border border-t-white"
-            style={style}
-        >
-            {open && (
-                <ul className="inline inline-block  rounded-lg text-white md:flex-row  md:mt-0 md:text-sm 	  lg:mt-8 lg:gap-2 lg:pt-6 2xl:text-2xl ">
-                    {
-                        menuItems.map(item =>
-                            <li
-                                key={item.id}
-                                className=" group relative border-b border-gray-900 last:border-b-0 text-lg pl-6 py-3	"
-                            >
-                                <a
-                                    href={item.url}
-                                    className={ItemStyle}
-                                    onClick={() => console.log('hamid')}
-
-                                >
-                                    {item.title}
-                                    {
-                                        item.children?.length > 0 &&
-                                        <svg
-                                            className=" fill-white h-12 w-12 text-white right-0  absolute -mt-6  transition: transform 0.3s ease-in-out;"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            height="20"
-                                            width="20"
-                                        >
-                                            <path
-                                                fill="none"
-                                                stroke="currentColor"
-                                                strokeWidth="2"
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                                d="M5 12h14M12 5v14"
-                                            />
-                                        </svg>
-                                    }
-
-
-                                </a>
-                                {
-                                    item.children?.length > 0 &&
-
-                                    <ul className="ml-10">
-
-
-                                        {
-                                            item.children.map(child =>
-                                                <li
-                                                    key={child.id}
-                                                    className="py-3 pl-4 hover:text-purple-600 "
-                                                >
-                                                    <a
-                                                        href={child.url}
-                                                    >
-                                                        {
-                                                            child.title
-
-                                                        }
-                                                        {
-                                                            child.children?.length > 0 &&
-                                                            <svg
-                                                                className=" fill-white h-12 w-12 text-white right-0  absolute -mt-6  transition: transform 0.3s ease-in-out;"
-                                                                xmlns="http://www.w3.org/2000/svg"
-                                                                height="20"
-                                                                width="20"
-                                                            >
-                                                                <path
-                                                                    fill="none"
-                                                                    stroke="currentColor"
-                                                                    strokeWidth="2"
-                                                                    strokeLinecap="round"
-                                                                    strokeLinejoin="round"
-                                                                    d="M5 12h14M12 5v14"
-                                                                />
-                                                            </svg>
-                                                        }
-                                                    </a>
-
-                                                    {
-                                                        child.children && (
-                                                            <ul>
-                                                                {child.children.map(subchild => (
-                                                                    <li
-                                                                        key={subchild.id}
-                                                                        className="py-3 pl-4 hover:text-purple-600"
-                                                                    >
-                                                                        <a href={subchild.url}>{subchild.title}</a>
-                                                                    </li>
-
-                                                                ))}
-                                                            </ul>
-                                                        )}
-                                                </li>)
-                                        }
-
-                                    </ul>
-
-                                }
->>>>>>> 59b7df897e4f4154a8ffe555fc7a3dc0ecc1cdae
                             </li>
                           ))}
                         </ul>
