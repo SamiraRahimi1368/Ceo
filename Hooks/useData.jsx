@@ -1,15 +1,13 @@
-const useData = async (url, sections) => {
+const useData = async (url) => {
   const response = await fetch(url, { cache: "no-store" });
 
   const data = await response.json();
   const result = {};
 
-  for (let index = 0; index < sections.length; index++) {
-    const section = sections[index];
-    const { key: sectionKey, ...sectionData } = data.sections.find(
-      (i) => i.key === section
-    );
-    result[section] = sectionData;
+  for (let i = 0; i < data.sections.length; i++) {
+    const section = data.sections[i];
+    const { key, ...sectionData } = section;
+    result[key] = sectionData;
   }
   return result;
 };
