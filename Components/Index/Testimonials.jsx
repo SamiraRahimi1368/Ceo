@@ -21,7 +21,7 @@ const star = (i, filled) => (
   </svg>
 );
 
-const Testimonials = ({ title, supertitle, description, image }) => {
+const Testimonials = ({ title, supertitle, description, image, items }) => {
   return (
     <div className="text-center	mt-24 text-slate-800 ">
       <h1 className="font-rubik font-bold text-orange-600 pt-4">

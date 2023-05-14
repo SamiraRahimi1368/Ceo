@@ -7,14 +7,12 @@ import Seo from "@/Components/Index/Seo";
 import Statistics from "@/Components/Index/Statistics";
 import Testimonials from "@/Components/Index/Testimonials";
 import useData from "@/Hooks/useData";
-// import Testimonials from "@/Components/Index/Testimonials"
 import Pricing from "@/Components/Index/Pricing";
 
 export default async function Home(props) {
-  
   const { hero, about, services, features, seo, customers, testimonials } =
     await useData("https://api.sceo.itcodes.ca/page/data?key=home");
-    
+
   return (
     <div>
       <Hero {...hero} />
@@ -24,7 +22,7 @@ export default async function Home(props) {
       <Customers {...customers} />
       <Seo {...seo} />
       <Statistics />
-      {/* <Testimonials {...testimonials} /> */}
+      <Testimonials {...testimonials} />
     </div>
   );
 }
