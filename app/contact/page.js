@@ -1,57 +1,71 @@
 "use client";
-import { useState } from "react";
-const style =
-  "block mb-2 text-sm font-medium text-gray-900 dark:text-white border m-4";
-const Contact = () => {
+import { useState, useEffect } from "react";
+
+export default function App() {
   const [name, setName] = useState("");
+  const [isNameDirty, setIsNameDirty] = useState(false);
+  const [isNameValid, setIsNameValid] = useState(false);
+
   const [phone, setPhone] = useState("");
-  const [message, setMessage] = useState("");
+  const [isPhoneValid, setIsPhoneValid] = useState(false);
+
+  const [isFormValid, setIsFormValid] = useState(false);
+
   const submit = () => {
     const data = {
       name,
       phone,
-      message,
     };
     console.log(data);
   };
+
+  useEffect(() => {
+    setIsFormValid(isNameValid && isPhoneValid);
+  }, [isNameValid, isPhoneValid]);
+
   return (
-    <div>
+    <div className="App">
       <form
-        className="flex flex-col gap-4 w-48 bg-red-400"
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          gap: "1rem",
+          width: "50vw",
+        }}
         onSubmit={(e) => {
           e.preventDefault();
           e.stopPropagation();
         }}
       >
+        <div>
+          <input
+            placeholder="Your name *"
+            value={name}
+            onChange={(e) => {
+              setIsNameDirty(true);
+              setName(e.target.value);
+              setIsNameValid(e.target.value);
+            }}
+            onBlur={(e) => setIsNameDirty(true)}
+          />
+          {isNameDirty && !isNameValid && (
+            <span style={{ color: "red" }}>Required</span>
+          )}
+        </div>
+        <hr />
         <input
-          className={style}
-          value={name}
-          placeholder="your name"
-          onChange={(e) => {
-            setName(e.target.value);
-          }}
-        />
-        <input
-          className={style}
+          placeholder="Your phone"
           value={phone}
-          placeholder="your phone"
           onChange={(e) => {
             setPhone(e.target.value);
+            setIsPhoneValid(e.target.value);
           }}
         />
-        <textarea
-          className={style}
-          value={message}
-          placeholder="your message"
-          onChange={(e) => {
-            setMessage(e.target.value);
-          }}
-        />
-        <button onClick={submit}>Submit</button>
+        <hr />
+        <button disabled={!isFormValid} onClick={submit}>
+          Submit
+        </button>
       </form>
-      {name}
     </div>
   );
-};
-
-export default Contact;
+}
