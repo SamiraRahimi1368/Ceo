@@ -6,13 +6,27 @@ const Contact = () => {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
+  const submit = () => {
+    const data = {
+      name,
+      phone,
+      message,
+    };
+    console.log(data);
+  };
   return (
     <div>
-      <form className="flex flex-col gap-4 w-48 bg-red-400">
+      <form
+        className="flex flex-col gap-4 w-48 bg-red-400"
+        onSubmit={(e) => {
+          e.preventDefault();
+          e.stopPropagation();
+        }}
+      >
         <input
           className={style}
           value={name}
-          placeholder="your name" 
+          placeholder="your name"
           onChange={(e) => {
             setName(e.target.value);
           }}
@@ -33,6 +47,7 @@ const Contact = () => {
             setMessage(e.target.value);
           }}
         />
+        <button onClick={submit}>Submit</button>
       </form>
       {name}
     </div>
