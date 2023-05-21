@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 
 const Faq = () => {
+  const [open, setOpen] = useState(false);
   const [questions, setQuestions] = useState([
     {
       id: 1,
@@ -48,7 +49,15 @@ const Faq = () => {
           {item.open && <div>{item.answer}</div>}
         </div>
       ))}
-      <button onClick={addMore}> Add More </button>
+      <button onClick={()=>{
+        setOpen(!open)
+      }}>
+         Add More 
+         </button>
+      {open && 
+      <div>
+        Something
+        </div>}
     </div>
   );
 };
