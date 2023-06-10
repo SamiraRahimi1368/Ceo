@@ -10,13 +10,22 @@ export default function App() {
   const [isPhoneValid, setIsPhoneValid] = useState(false);
 
   const [isFormValid, setIsFormValid] = useState(false);
-   
-  const submit = () => {
+
+  const submit = async () => {
     const data = {
       name,
       phone,
     };
-    console.log(data);
+    const response = await fetch("/form/save", {
+      method: "POST",
+      mode: "cors",
+      credentials: "same-origin",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+    console.log(response.json());
   };
 
   useEffect(() => {
