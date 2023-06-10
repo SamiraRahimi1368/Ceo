@@ -10,7 +10,7 @@ export default function App() {
   const [isPhoneValid, setIsPhoneValid] = useState(false);
 
   const [isFormValid, setIsFormValid] = useState(false);
-
+   
   const submit = () => {
     const data = {
       name,
