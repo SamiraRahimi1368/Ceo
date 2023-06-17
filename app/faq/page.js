@@ -8,26 +8,36 @@ const Faq = () => {
       id: 1,
       question: "why",
       answer: "because",
+      open: false,
     },
     {
       id: 2,
       question: "how",
       answer: "like that",
+      open: false,
     },
   ]);
   const openItem = (item) => {
     setQuestions((previousQuestions) => {
-      for (var index in previousQuestions) {
-        const question = previousQuestions[index];
-        if (questions.id === item.id) {
-          question.open = true;
+      return previousQuestions.map((question) => {
+        if (question.id === item.id) {
+          return {
+            ...question,
+            open: true,
+          };
         } else {
-          question.open = false;
+          return {
+            ...question,
+            open: false,
+          };
         }
-      }
-      return previousQuestions;
+      });
     });
   };
+  
+  useEffect(() => {
+    console.log(questions);
+  }, [questions]);
 
   const addMore = () => {
     setQuestions((previousQuestions) => {
@@ -43,21 +53,20 @@ const Faq = () => {
   };
   return (
     <div>
-      {questions.map((item) => (
-        <div onClick={() => openItem(item)}>
+      {questions.map((item, index) => (
+        <div onClick={() => openItem(item)} key={index}>
           {item.question}
           {item.open && <div>{item.answer}</div>}
         </div>
       ))}
-      <button onClick={()=>{
-        setOpen(!open)
-      }}>
-         Add More 
-         </button>
-      {open && 
-      <div>
-        Something
-        </div>}
+      <button
+        onClick={() => {
+          setOpen(!open);
+        }}
+      >
+        Add More
+      </button>
+      {open && <div>Something</div>}
     </div>
   );
 };
